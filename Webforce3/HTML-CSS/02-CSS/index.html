@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <title>Votre agence de Voyage</title>
+    </head>   
+    <body>
+        <main>
+            <header>
+                <section>
+                    <img src="images/logo-avion.jpg" alt="logo-avion">
+                </section>
+                
+                    <ul>
+                        <li class="current"><a href="index.html">Accueil</a></li>                           
+                        <li><a href="#">Présentation</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+            </header>
+            
+            <section>
+                <h1>Votre agence de voyage</h1>    
+                <aside> 
+                <!-- image d'illlustration -->
+                <img src="images/miami.jpg" alt="img miami">
+                </aside>
+                <article>
+                    <!-- Texte d'introduction -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nam laboriosam nobis alias vitae dolor, exercitationem atque delectus aspernatur beatae id dolorum aperiam officiis quasi repudiandae, voluptatum rem inventore. Tempore!</p>
+                    <h3>Voyagez à prix mini !</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint blanditiis qui, hic facere quibusdam corporis rem perspiciatis voluptatem nulla accusamus, illo cupiditate quisquam. Culpa rerum totam impedit perspiciatis itaque eveniet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error tempore sunt laborum commodi sint molestiae nobis eveniet, culpa illum magnam qui et ipsa itaque aspernatur quaerat magni iusto optio!</p>
+                </article>
+            </section>
+            
+            <footer>
+                <section class="gmap">
+                    <!-- Mettre en place une image google map -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57466.929406738636!2d-80.17941183456298!3d25.81402730124017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a6172bfeddb9%3A0x37be1741259463eb!2sMiami+Beach%2C+Floride%2C+%C3%89tats-Unis!5e0!3m2!1sfr!2sfr!4v1490707540722" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </section>
+                
+                <section class="newsletter"> 
+                    <!-- Formulaire de Newsletter | Nom, Prénom et Email -->
+                    <form name="Newsletter" action="Newsletter.php" method="post">
+                        <fieldset>
+                                <legend>Newsletter</legend>
+                                <input type="text" name="utilisateur" placeholder="Nom...">
+                                <input type="text" name="prénom" placeholder="Prénom...">                            
+                                <input email="text" name="Email" placeholder="Saisissez votre email..." required>
+                                <input type="submit" value="M'inscrire !">
+                        </fieldset>
+                    </form>    
+                 </section>
+                
+                <section class="contact">
+                    <!-- Coordonnées de contact -->
+                    <h3>Contactez-nous</h3>
+                    <address>
+                        <i class="fa fa-at"></i>  
+                        <a href="mailto:AgenceDeVoyage@gmail.com">Email : AgenceDeVoyage@gmail.com</a><br>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <a href="tel:+50150604050">N° : 01.50.60.40.50</a><br>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Adresse : 142 Avenue Jean Jaurès - 93500 Pantin
+                    </address>                   
+                </section>                
+            </footer>    
+        </main>   
+    </body>
+</html>

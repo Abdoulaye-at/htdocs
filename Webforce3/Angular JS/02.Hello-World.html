@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular vs jQuery</title>
+    <!-- Intégration de Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=" crossorigin="anonymous"></script>
+  </head>
+
+  <body ng-app>
+
+    <!-- L'attribut ng-app : L'attribut ng-app est ce que l'on appelle une directive. Il signale à AngularJS le début de notre application -->
+    <p>
+      <input type="text" ng-model="nomcomplet" name="nomcomplet" placeholder="Saisissez votre nom">
+    </p>
+
+    <!--
+    ng-model : La directive ng-model permet de créer dans notre Application une variable      appelée nomcomplet qui prendra la valeur saisie par l'utilisateur.
+    Cette opérateur magique est entièrement géré par AngularJS.
+    Cette variable "nomcomplet" est accessible dans l'ensemble du "$scope" de l'application.
+    -->
+
+    <h3> Bonjour {{nomcomplet}} !</h3>
+    <!--
+      On utilise ensuite une {{ expression }} pour afficher le contenu de la variable dans l'application.
+      Tout ce qui est entre les doubles accolades sera interpreté pas AngularJS
+    -->
+
+    <!-- Intégration de jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+  </body>
+</html>

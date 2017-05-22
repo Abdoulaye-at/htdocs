@@ -1,0 +1,8 @@
+section div img{
+  width: 100%;
+}
+
+.col-xs-4 {
+    border: 2px solid #615F5D;
+    border-radius: 10%;
+}

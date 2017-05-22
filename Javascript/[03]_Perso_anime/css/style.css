@@ -1,0 +1,161 @@
+body {
+  background-image: url('../img_chat/wallpaper.gif');
+  background-size: cover;
+  animation-name: backMove;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes backMove {
+  0% {
+    background-position-x : 100vw;
+  }
+  100% {
+    background-position-x : 0vw;
+  }
+}
+
+#chat{
+  position:relative;
+}
+
+/*-------------------------------walk------------------------------*/
+.walk {
+  height: 500px;
+  width: 500px;
+  /*background-image: url('../img_chat/walk00.jpg');*/
+  background-size: 250px auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  animation-name: walk;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes walk{
+  0%{
+    background-image: url('../img_chat/walk00.jpg');
+  }
+  10%{
+    background-image: url('../img_chat/walk01.jpg');
+  }
+  20%{
+    background-image: url('../img_chat/walk02.jpg');
+  }
+  30%{
+    background-image: url('../img_chat/walk03.jpg');
+  }
+  40%{
+    background-image: url('../img_chat/walk04.jpg');
+  }
+  50%{
+    background-image: url('../img_chat/walk05.jpg');
+  }
+  60%{
+    background-image: url('../img_chat/walk06.jpg');
+  }
+  70%{
+    background-image: url('../img_chat/walk07.jpg');
+  }
+  80%{
+    background-image: url('../img_chat/walk08.jpg');
+  }
+  90%{
+    background-image: url('../img_chat/walk09.jpg');
+  }
+  100%{
+    background-image: url('../img_chat/walk00.jpg');
+  }
+}
+
+/*--------------------------run----------------------------------*/
+.run {
+  height: 500px;
+  width: 500px;
+  /*background-image: url('../img_chat/run00.jpg');*/
+  background-size: 250px auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  animation-name: run;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes run{
+  0%{
+    background-image: url('../img_chat/run00.jpg');
+  }
+  10%{
+    background-image: url('../img_chat/run01.jpg');
+  }
+  20%{
+    background-image: url('../img_chat/run02.jpg');
+  }
+  30%{
+    background-image: url('../img_chat/run03.jpg');
+  }
+  40%{
+    background-image: url('../img_chat/run04.jpg');
+  }
+  50%{
+    background-image: url('../img_chat/run05.jpg');
+  }
+  60%{
+    background-image: url('../img_chat/run06.jpg');
+  }
+  70%{
+    background-image: url('../img_chat/run07.jpg');
+  }
+  80%{
+    background-image: url('../img_chat/run08.jpg');
+  }
+  90%{
+    background-image: url('../img_chat/run03.jpg');
+  }
+  100%{
+    background-image: url('../img_chat/run00.jpg');
+  }
+}
+
+/*------------------------------border-------------------------------*/
+.border {
+  height: 500px;
+  width: 500px;
+  background-size: 250px auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #A6A39E;
+  background: -moz-radial-gradient(100px 100px, circle, #5cabff, #000);
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(180deg);
+  animation-name: border;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.border
+{
+    -webkit-animation-name:             rotate;
+    -webkit-animation-duration:         2s;
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@keyframes backMove {
+  0% {
+    background-position-x : 100vw;
+  }
+  100% {
+    background-position-x : 0vw;
+  }
+}

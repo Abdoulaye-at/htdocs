@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Aujourd'hui, CSS en Folie !</title>
+        
+        <!-- Ajouter un Fichier CSS à ma Page -->
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+    </head>
+    <body>
+        <main>
+            <header>
+                <section></section>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="current"><a href="presentation.html">Présentation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </header>
+            <section>
+                <h1>Présentation</h1>
+                <article class="contenu-page">
+                     <p>L'ISEN est constitué des trois écoles de Brest, Lille et de Toulon. Ces établissements sont sous contrat avec le Ministère de l’Enseignement Supérieur et de la Recherche. Ils sont membres de la Conférence des Grandes Écoles et tous habilités par la Commission des Titres d’Ingénieur.</p>
+                    
+                    <p><img src="http://www.isen.fr/wp-content/uploads/2016/06/bg-allisdigital.jpg" alt="Partenaires" /></p>
+                    
+                    <strong>Son organisation</strong>
+                    
+                    <p>L'ISEN est constitué par trois écoles sur les campus diplômants de Brest-Rennes, de Lille et de Toulon. Il est également représenté sur des sites partenaires sur Nîmes (formation jusqu'à BAC+3 à ce jour), et sur les villes d'Avignon, de Metz et d'Orléans (jusqu'à BAC+2).</p>
+
+                    <p>Des structures à taille humaine sur des sites où chaque étudiant dispose d'interlocuteurs permanents parmi le corps enseignant.</p>
+                </article>
+            </section>
+            <footer>
+                <section class="gmap">
+                    <!-- 3. Mettre en Place une Carte Google Map -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.3958316832745!2d2.394815915437716!3d48.90785030517728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66c4656857155%3A0x94b8bde5f2bf0008!2s142+Avenue+Jean+Jaur%C3%A8s%2C+93500+Pantin!5e0!3m2!1sfr!2sfr!4v1490693598209" 
+                    width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </section>
+                <section class="newsletter">
+                    <!-- 4. Formulaire de Newsletter | Nom, Prénom et Email -->
+                    <form name="Newsletter" action="newsletter.php" method="post">
+                        <fieldset>
+                            <legend>Newsletter</legend>
+                            <input type="text" name="nom" placeholder="Nom">
+                            <input type="text" name="prenom" placeholder="Prénom">
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="submit" value="M'inscrire !">
+                        </fieldset>
+                    </form>
+                </section>
+                <section class="contact">
+                    <!-- 5. Coordonnée de Contact -->
+                    <h3>Contactez-nous</h3>
+                    <address>
+                        <strong>ISEN</strong> <br>
+                        <a href="tel:+33783971515"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;0783 97 15 15</a> <br>
+                        <a href="mailto:wf3@hl-media.fr"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;wf3@hl-media.fr</a> <br>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;142 Avenue Jean Jaurès <br>
+                        93500 Pantin <br>
+                        FRANCE
+                    </address>
+                </section>
+            </footer>
+        </main>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

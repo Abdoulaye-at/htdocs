@@ -1,0 +1,45 @@
+// Initialisaiton de jQuery //
+
+$(function() {
+  $('#formulaire').on('submit', function(event) {
+
+    // 'event' correspond à notre évènement 'submit' //
+    event.preventDefault();
+
+    // Réinitialisation des erreurs //
+    $('#formulaire .has-error').removeClass('has-error');
+    $('#formulaire .text-danger').remove();
+    $('#formulaire .alert').remove();
+
+    // Déclaration des variables ( Champs à vérifier )//
+     choix = $('#choix');
+     textarea = $('#entrer');
+
+
+    // Vérification de chaque champ //
+
+    // Vérification du nom //
+      for( i=0; i < choix.length; i++){
+        if(choix.val() == choix[i]) {
+          choix.parent().addClass('has-error');
+          $("<p class='text-danger'>N'oubliez pas de faire votre choix !</p>").appendTo(choix.parent());
+        }
+      }
+
+
+    if(textarea.val().length < 15) {
+      textarea.parent().addClass('has-error');
+      $("<p class='text-danger'>N'oubliez pas de saisir vos motivations !</p>").appendTo(textarea.parent());
+    }
+
+    // // Je procède à la validation si aucune erreur est détectée ; dans le cas contraire, j'affiche une message d'alerte   //
+    if($(this).find('.has-error').length == 0) {
+
+      $(this).replaceWith("<div class= 'alert alert-success'> Félicitations, votre demande à bien été envoyée; nous vous répondrons das les meilleurs délais !</div>");
+    } else {
+
+      $(this).prepend("<div class= 'alert alert-danger'> Nous navons pas été en mesure de valider votre demande. Veuillez vérifier vos informations.</div>");
+    }
+
+  });
+});

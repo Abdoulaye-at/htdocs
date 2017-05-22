@@ -1,0 +1,272 @@
+/*---------------------------------------------------------------------------------------------------
+
+Dans cette feuille de style css, je vais pouvoir définir l'apparence que je veux donner aux différents éléments qui composent ma page ! 
+
+### La syntaxe ###
+
+MonElement{
+    propriete:valeur;
+}
+
+.MaClasse{
+    propriete:valeur;
+}
+
+#Monid{
+    propriete:valeur;
+}
+
+CONSIGNE:
+
+1- Tous les liens de mon <header> sont en noir
+2- Non soulignés
+3- Affichés en ligne grâce à la propriété "display"
+
+---------------------------------------------------------------------------------------------------------*/
+
+
+header a {
+    color: #000;
+    text-decoration: none; 
+    text-transform: uppercase;
+}
+
+/*----------------------------------------------------------
+Ici, je cible toutes les listes présentes dans mon header
+-------------------------------------------------------------*/
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    display: inline-block;
+    width: 317px;
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+Je souhaite que mes liens soient rouges au passage de la souris
+----------------------------------------------------------------*/
+a:hover {
+    color:  red;
+}
+
+/*-------------------------------------------------------------------
+Je change la couleur de mon lien à l'intérieur de la classe current.
+---------------------------------------------------------------------*/
+header ul li.current a {
+    color: red;
+}
+
+
+
+header section img {
+    width: 225px;
+    height: auto;
+    margin-top: 90px;
+    margin-left: 50px;
+    border-radius: 20%;
+}
+
+section img {
+    width: 460px;
+    height: auto;
+}
+/*-------------------------------------------------------------------
+Style du main
+---------------------------------------------------------------------*/
+main {
+    width: 100%;
+    max-width: 960px;
+    margin: 80px auto;
+    background: #FFF;
+
+}
+/*-------------------------------------------------------------------
+Je change la couleur de mon background
+---------------------------------------------------------------------*/
+body {
+    background-color: #130061;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+/*-------------------------------------------------------------------
+
+CONSIGNE:
+
+    1- A mon main, je souhaite ajouter une marge de 60px
+    2- Ajouter avec la propiété "border-radius" un arrondi de 5px
+    3- Puis,grâce à "box-shadow", ajouter une légère ombre autour de <main>
+---------------------------------------------------------------------*/
+main {
+    margin: 80px auto 80px auto;
+    border-radius: 5px;
+    
+    /*- box-shadox: offset-x (décalage vertical) | offset-y (décalage horizontal) | blur-radius (flou) | color -*/
+    box-shadow: 8px 8px 10px #000;
+    
+    /*------------------- J'applique une marge interne de 5px autour de moon <main> ---------------------*/
+    padding: 5px;
+    
+    /*---- Overflow avec la valeur hidden, va supprimerl'affichage de tous les éléments qui dépasse du <main> -------*/
+    overflow: hidden;
+}
+    
+main section h1 {
+    /*-- Aligner mon titre au milieu --*/
+    text-align: center;
+    
+    /*-- Je ne souhaite pas que mon titre soit en gras --*/
+    font-weight: normal;
+    
+    border-bottom: 1px dashed #000
+}    
+    
+    
+    
+/*--------------------------------------------------------
+                                HEADER
+---------------------------------------------------------*/    
+    
+header section {
+    width: 100%;
+    height: 392px;
+    background: url(../images/plage.jpg) no-repeat;
+    background-size: cover;
+}    
+    
+/*--------------------------------------------------------
+                    ILLUSTRATION ET ARTICLE
+---------------------------------------------------------*/      
+    
+section aside {
+    width: 50%;
+    height: auto;
+    float: left;
+}   
+section aside img {
+    max-width: 100%;
+}  
+/*----------1ère possibilité-----------*/
+/*-----------------Box-sizing: border | padding-box (inclure le paggind dans la width)------------------------*/
+/*----------2ème possibilité-----------*/
+/*----- width: calc(50% - 20px);
+        margin 0 10px 0 10px;    --------*/
+
+
+section article {
+    width: 50%;
+    height: auto;
+    float: left;
+}   
+section article p {
+    /*text-transform: justify;*/
+}    
+    
+    
+/*--------------------------------------------------------
+                        FOOTER
+---------------------------------------------------------*/     
+    
+footer {
+    width: 100%;
+    height: auto;
+    float: left;
+    background-color: #BBCFFF;
+}    
+.gmap {
+    width: 33%;
+    height: auto;
+    float: left;
+}
+
+iframe {
+    width: 315px;
+    height: auto
+}
+
+/*--------------------------------------------------------
+                        NEWSLETTER
+---------------------------------------------------------*/  
+.newsletter {
+    width: 33%;
+    height: auto;
+    float: left;
+}
+
+.newsletter form fieldset {
+    border: 2px solid #FFF;
+    height: 140px;
+    border-radius: 5%;
+}
+
+.newsletter input {
+    width: 95%;
+    height:25px;
+    margin-top: 3px;
+}
+
+.newsletter input[type=submit] {
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------
+                        CONTACT
+---------------------------------------------------------*/     
+    
+section a {
+    color: black;
+    text-decoration: none;
+}
+
+section adress {
+    padding-left: 3px;    
+}
+
+section h3 {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+    
+.contact {
+    width: 33%;
+    height: 145px;
+    margin-top: 10px;   
+    float: left;
+    /*border: 1px solid grey;*/
+}  
+
+.contact address a:hover {
+    text-decoration: underline;
+}
+.contact address {
+   padding-left: 15px;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

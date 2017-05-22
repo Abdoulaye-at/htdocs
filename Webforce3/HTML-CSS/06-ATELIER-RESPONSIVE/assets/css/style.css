@@ -1,0 +1,109 @@
+body {
+    font-family: 'Play';
+    font-weight: bold, italic;
+    font-size: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+}
+
+[class*="col-"] {
+/*    background-color: rgba(86, 61, 124, 0.15);
+    border: 1px solid rgba(86, 61, 124, 0.2);*/
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+/*-------------------------------------------------------
+                            TOP HEADER
+---------------------------------------------------------*/
+section:first-child {
+    background-image: linear-gradient(180deg, #2B2B2A, white);
+}    
+
+
+/*-------------------------------------------------------
+                            HEADER
+---------------------------------------------------------*/
+
+header {
+    width: 100%;
+    max-width: 1300px;
+}
+
+header ul li {
+    display: inline-block;
+    margin-left: 20%;/
+}
+
+header ul li a {
+    color: #16659E;
+}
+
+header ul li a:hover {
+    color: #EC2330;
+}
+
+div.col-xs-6 img {
+    height: 100%;    
+    width: 50%;
+    margin-left: 10%;
+    
+}
+
+/*-------------------------------------------------------
+                    HEADER - PROJECTEUR
+---------------------------------------------------------*/
+
+.projecteur img {
+    width: 100%;
+    max-width: 1300px;
+}
+
+
+/*-------------------------------------------------------
+                    SECTION - VIDEOS
+---------------------------------------------------------*/
+
+/*-------------------------------------------------------
+                    SECTION - PHOTOS
+---------------------------------------------------------*/
+
+section div {
+    
+}
+
+section div img{
+    width: 100%;
+}
+
+/*-------------------------------------------------------
+                        FOOTER 
+---------------------------------------------------------*/
+
+footer div.col-xs-12 {
+    background-image: linear-gradient(180deg, white, #B39D6B);
+
+}
+
+footer div.col-lg-12 {
+    text-align: center;
+}
+
+
+footer div:nth-of-type(2) {
+    font-size: 30px;    
+}
+
+footer div a:hover {
+    text-decoration: none;
+    color: #EC2330;
+}
+
+footer div img{    
+    margin-left: 40%;
+}

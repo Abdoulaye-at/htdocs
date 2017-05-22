@@ -1,0 +1,162 @@
+/*---------------------header--------------------*/
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush');
+
+header {
+  position: relative;
+  background-image: url('../img/fd_decran_mur.PNG');
+  padding-bottom: 140px;
+}
+.fa{
+  color: #E53F6F;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+ nav {
+   position:absolute;
+   right: 10px;
+   top: 20px;
+ }
+ h1{
+  font-family: 'Caveat Brush', cursive;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+h1 span{
+  font-size: 40px;
+  display: inline;
+  vertical-align: top;
+  position: relative;
+}
+h1 span:after{
+  top: 15px;
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+ div {
+   width: 0px;
+   top: 35px;
+   display: block;
+   margin:auto;
+   position: relative;
+ }
+
+ #logo {
+   width: 200px;
+   height: 200px;
+   margin: auto;
+   position: relative;
+
+ }
+ #logo div {
+   width: 0;
+   height: 0;
+   border-top: 150px solid #EC407A;
+   border-left: 150px solid transparent;
+   position: absolute;
+ }
+ #logo img{
+   position: absolute;
+ }
+
+ header img {
+   width: 170px;
+   margin-right: auto;
+   margin-left: auto;
+   position: absolute;
+   display: block;
+ }
+ .rectangle{
+  position: absolute;
+  margin: 0;
+  display: block;
+  border: 7px solid #E53F6F;
+  padding: 0 15px;
+  width: 0px;
+  left: 3%;
+  top: 94px;
+
+ }
+
+.inlineB {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*-------------------------fin header--------------------*/
+
+
+/*------------------------1ere section-------------------*/
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+section {
+  text-align: center;
+}
+section p, h2 {
+  padding: 0 200px;
+}
+
+.blocttximg{
+  display: inline-block;
+  width: 50%;
+}
+
+section img{
+  width: 100%;
+  height:auto;
+}
+
+.pblocright{
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 60%
+}
+
+.pblocleft{
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 40%
+}
+
+.txtRose{
+  color: #E53F6F;
+  text-transform: uppercase;
+}
+#scale{
+  transform: scaleX(-1);
+}
+#story{
+  margin-top: -34px;
+}
+
+#soap .pblocleft{
+  display: inline-block;
+  width: 70%
+}
+
+#soap .pblocright{
+  display: inline-block;
+  width: 30%
+}
+
+#eggs {
+  width: 100%;
+  height: auto;
+}
+
+/*---------------------Footer--------------------*/
+footer > div {
+  display: inline;
+  vertical-align: middle;
+  /*position: absolute;*/
+  right: 50px;
+}

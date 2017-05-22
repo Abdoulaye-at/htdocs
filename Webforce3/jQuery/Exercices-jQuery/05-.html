@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+
+    <form id="monFormulaire" action="connexion.php" method="post">
+
+      <input type="text" name="email" placeholder="Veuillez saisir votre Email...">
+      <input type="text" name="email" placeholder="Veuillez saisir votre Mot de Passe...">
+
+      <input type="submit" id="submit" value="Connexion">
+    </form>
+
+    <!-- CONSIGNE : Avec l'aide de jQuery, vous devrez :
+
+            1. A l'aide d'une API de géoloc, vous affichez dans un paragraphe du formulaire l'adresse IP ainsi que la Ville et/ou Code Postal de l'utilisateur connecté.
+
+            // Utilisation de Jsonp : geoip.nekudo.com || ip-api.com //
+    -->
+
+    <script>
+      $(function() {
+        // 1ère façon de faire
+        $.ajax('http://geoip.nekudo.com/api/').done(function(resultat) {
+          console.log(resultat);
+        });
+
+        // 2ème façon de faire
+        $.getJSON('http:/ip-api.com/json/?callback=', function(resultat) {
+          console.log(resultat);
+        })
+      })
+    </script>
+  </body>
+
+</html>

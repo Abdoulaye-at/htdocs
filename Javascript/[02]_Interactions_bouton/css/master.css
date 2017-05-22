@@ -1,0 +1,115 @@
+/*------------------------------pacman------------------------------*/
+
+.pacman {
+width: 0px;
+height: 0px;
+border-right: 60px solid transparent;
+border-top: 60px solid #FFC304;
+border-left: 60px solid #FFC304;
+border-bottom: 60px solid #FFC304;
+border-top-left-radius: 60px;
+border-top-right-radius: 60px;
+border-bottom-left-radius: 60px;
+border-bottom-right-radius: 60px;
+}
+
+
+/*----------------------------------oeuf------------------------------*/
+.egg {
+display:block;
+width: 126px;
+height: 180px;
+background-color: #FFEFC6;
+-webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+
+/*-------------------------------coeur--------------------------------*/
+.heart {
+position: relative;
+width: 100px;
+height: 90px;
+}
+#heart:before,
+#heart:after {
+position: absolute;
+content: "";
+left: 50px;
+top: 0;
+width: 50px;
+height: 80px;
+background: #FF577B;
+-moz-border-radius: 50px 50px 0 0;
+border-radius: 50px 50px 0 0;
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+-webkit-transform-origin: 0 100%;
+-moz-transform-origin: 0 100%;
+-ms-transform-origin: 0 100%;
+-o-transform-origin: 0 100%;
+transform-origin: 0 100%;
+}
+#heart:after {
+left: 0;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+-webkit-transform-origin: 100% 100%;
+-moz-transform-origin: 100% 100%;
+-ms-transform-origin: 100% 100%;
+-o-transform-origin: 100% 100%;
+transform-origin :100% 100%;
+}
+
+
+
+
+/*------------------------------hexagone-----------------------------*/
+.hexagon {
+width: 100px;
+height: 55px;
+background: black;
+position: relative;
+}
+#hexagon:before {
+content: "";
+position: absolute;
+top: -25px;
+left: 0;
+width: 0;
+height: 0;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-bottom: 25px solid red;
+}
+#hexagon:after {
+content: "";
+position: absolute;
+bottom: -25px;
+left: 0;
+width: 0;
+height: 0;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-top: 25px solid red;
+}
+
+
+
+
+
+/*-----------------------------cercle---------------------------------*/
+.circle {
+width: 100px;
+height: 100px;
+background: #1B59FF;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+}

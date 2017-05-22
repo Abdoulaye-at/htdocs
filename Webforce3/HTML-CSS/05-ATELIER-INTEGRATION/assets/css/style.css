@@ -1,0 +1,357 @@
+body {
+    background: url(../img/fond.jpg) no-repeat;
+    background-size: cover;
+}
+
+main {
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+main > p {
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+
+main > p span {
+    text-decoration: underline;
+}
+
+/*-----------------------------------------
+                HEADER
+------------------------------------------*/
+
+header {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(#ffffff 0%, #dddddd 100%);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.65);
+}
+
+header div {
+    display: inline-block;
+}
+
+header div img {
+    width: 133px;
+    height: 19px;
+    margin-left: 162px;
+}
+
+header ul {
+    width: 523px;
+    height: 17px;
+    display: inline;
+    margin-left: 275px;
+}
+
+header ul li {
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+header ul li.current a {
+    color:  #3060a7;
+}
+
+header ul li a {
+    color:  #202020;
+    text-decoration: none;
+    text-transform: none;
+}
+
+header ul li.red a {
+     color: #fe3224;
+}
+
+header ul li:hover {
+    text-decoration: underline;
+}
+
+.traduction {
+    width: 25%;
+    height: 19px;
+}
+
+.traduction p{
+  font-family: arial, sans-serif;
+  font-size: 11px;
+  color: #202020;
+  text-transform: uppercase;
+}
+
+/*-----------------------------------------
+                    SECTION
+------------------------------------------*/
+
+section {
+    width: 100%;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+/*-----------------------------------------
+                SECTION - ASIDE
+------------------------------------------*/
+section aside {
+    border-left: 5px solid  #c43e3e;
+    width: 339px;
+    margin-left: 173px;
+}
+
+section aside img {
+    width: 100%;
+}
+
+section aside div {
+    background: linear-gradient(180deg, #fbfbfb 0%, #bbbbbb 100%);
+    width: 339px;
+    height: 69px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+section aside div p {
+    padding-top: 15px;
+}
+
+#rouge {
+    color:  #fe3626;
+}
+
+#marron {
+    color: #bc8242;
+}
+
+#bleu{
+    color: #3860a7;
+}
+
+#vert{
+    color:  #08a640;
+}
+
+/*-----------------------------------------
+            SECTION - ARTICLE
+------------------------------------------*/
+
+#fleur{
+    left: 50%;
+    transform: translate(-50%, 50%);
+    position: absolute;
+    top: 79%;
+/*    display: block;
+    margin: auto;
+    z-index: 1;
+    position: relative;
+    margin-bottom: -60px;*/
+}
+
+div article {
+    background: radial-gradient(circle farthest-side at 50%, #ffffff 0%, #febeb9 100%);
+    padding-bottom: 30px;    
+}
+
+section article div > p {
+    font-family: Arial, sans-serif;
+    color:  #000000;
+    font-size: 13px;
+    text-align: center;
+}
+article div {
+  text-align: center;
+}
+section article div > p span {
+    text-decoration: underline;
+}
+
+.red {
+    color: #fe372a;
+    text-decoration: none;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+.bouton {
+	background-color:#fe372a;
+	border-radius:10px 0 10px 0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    text-transform: uppercase;
+	text-shadow:0px 1px 0px #2f6627;
+    position: relative;
+}
+
+.bouton:hover:before {
+    width: 147px;
+    height: 36px;
+    background: url(../img/fleches.png);
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -300px;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -50%;
+    width: 100%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 80%;
+  }
+}
+
+
+.bouton:hover:after {
+    width: 147px;
+    height: 36px;
+    transform: rotate(180deg);
+    background: url(../img/fleches.png);
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -160px;
+    animation-duration: 2s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes slide {
+  from {
+    margin-right: -100%;
+    width: 100%; 
+  }
+
+  to {
+    margin-right: -35%;
+    width: 80%;
+  }
+}
+
+.bouton:active {
+	position:relative;
+	top:1px;
+}
+
+/*------------------------
+            FOOTER
+-----------------------------*/
+
+footer {
+    width: 100%;
+    background-color: #2E2D2C;
+    color: white;
+    margin: 0 auto;
+    padding: 0 auto;
+    border-top: 5px solid #fe372a;
+}
+footer section {
+    width: 80%;
+    margin: auto;
+    background: inherit;
+}
+
+footer h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.div {
+    width: 205px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 110px;
+}
+
+.div i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #2E2D2C;
+    background-color: white;
+    border-radius: 50%
+}
+
+.div a {
+    text-decoration: none;
+}
+
+.newsletter {
+    width: 400px;
+    display: inline-block;
+}
+
+.newsletter input:first-of-type {
+    background-color: #2E2D2C;
+    border: none;
+    color: white;
+    text-decoration: underline;
+}
+
+.newsletter input:last-of-type {
+    background-color: #2E2D2C;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

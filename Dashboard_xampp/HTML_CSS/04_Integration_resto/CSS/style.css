@@ -1,0 +1,85 @@
+/*--------------header---------------*/
+header {
+  position: relative;
+  background-image: url('../img/fd_decran_mur.PNG');
+  padding-bottom: 140px;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+ nav {
+   position:absolute;
+   right: 10px;
+   top: 20px;
+ }
+ h1 {
+      left: auto;
+ }
+ div {
+   width: 0px;
+   top: 35px;
+   display: block;
+   margin:auto;
+   position: relative;
+ }
+
+ #logo {
+   width: 200px;
+   height: 200px;
+   margin: auto;
+   position: relative;
+
+ }
+ #logo div {
+   width: 0;
+   height: 0;
+   border-top: 150px solid #EC407A;
+   border-left: 150px solid transparent;
+   position: absolute;
+ }
+ #logo img{
+   position: absolute;
+   /*margin-left: 685px;*/
+ }
+
+ header img {
+   width: 170px;
+   margin-right: auto;
+   margin-left: auto;
+   position: absolute;
+   display: block;
+ }
+
+
+.inlineB {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*---------------fin header----------*/
+
+
+/*---------------1ere section----------*/
+section {
+  display: inline-block;
+  width: 1462px;
+  height: 500px;
+}
+
+article {
+  width: 400px;
+  height: 300px;
+  width: 400px;
+  margin-left: 150px;
+  margin-top: 150px;
+}
+
+article h2 {
+  text-align: center;
+}
+
+div img {
+  800px
+}

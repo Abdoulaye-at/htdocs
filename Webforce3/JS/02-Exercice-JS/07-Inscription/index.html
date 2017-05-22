@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <title>Exercice 5 - FINAL</title>
+      <style>
+          .pseudoError, .ageError {
+            width: 200px;
+            height: 20px;
+            background-color: yellow;
+            color: red;
+            display: none;
+            }
+            .ageError {
+              width: 360px;
+            }
+      </style>
+    </head>
+
+    <body>
+      <h1>Formulaire d'inscription</h1>
+      <h3 id="Bienvenue"></h3>
+      <form method="get" action="inscription.php" onsubmit="return false;" id="InscriptionForm">
+        <input type="text"  id="pseudo"  placeholder="Choisissez un Pseudo"><br />
+          <div class="pseudoError">Ce pseudo est déjà pris.</div><br />
+
+        <input type="text"   id="age"     placeholder="Quel est votre Age ?"><br />
+          <div class="ageError">Vous devez avoir au moins 18 ans pour vous inscrire.</div><br />
+
+        <input type="email"  id="email"   placeholder="Quel est votre Email ?"><br /><br />
+        <input type="password"   id="mdp"     placeholder="****"><br /><br />
+        <input type="submit" id="submit" value="M'inscrire">
+        </form>
+
+      <script src="script.js"> </script>
+
+  </body>
+</html>

@@ -1,0 +1,119 @@
+body {
+  font-family: PlayfairDisplay-Italic;
+}
+
+a {
+  text-decoration:none;
+  color: black;
+}
+/*--------------------header---------------*/
+header{
+  text-align: center;
+}
+
+header p {
+  color: #6B3530;
+}
+
+h1 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 500px;
+  margin-left: 25%;
+}
+
+h2 {
+  border-bottom: 1px solid black;
+}
+.inlineB {
+  display: inline-block;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+
+.plat {
+  display: inline-block;
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 300px;
+}
+
+/*-------------------body-------------------*/
+#container {
+  width:1000px;
+  margin:0 auto;
+}
+
+#absolute {
+  position: absolute;
+}
+
+.bg{
+  background-color: #212120;
+  color: white;
+}
+.pBloque-left, .pBloque-right{
+  display: inline-block;
+  vertical-align: middle;
+  /*height: 820px;*/
+  overflow: hidden;
+}
+.pBloque-left{
+  width: 50%;
+  overflow: visible;
+  position: relative;
+}
+.pBloque-right{
+  width: 50%;
+}
+
+ section img {
+  width: 500px;
+  height: auto;
+}
+
+#plavon {
+  width: 1000px;
+  height: 500px;
+}
+.ex {
+  border-bottom: 1px solid black;
+  padding-left: 440px;
+}
+.merlu{
+  margin-left: 410px;
+}
+.carotte {
+  margin-left: 366px;
+
+}
+.epices {
+  margin-left: 75%;
+
+}
+/*-------------------footer-----------------------*/
+
+footer {
+  text-align: center;
+}
+
+.logo {
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#txt{
+position: relative;
+margin-left: 30px;
+margin-top: 60px;
+}
+footer img{
+  position: absolute;
+width: 250px;
+margin-left: -115px;
+}

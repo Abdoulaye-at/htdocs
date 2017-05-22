@@ -1,0 +1,120 @@
+/*maquette responsive Abdoulaye Thiaw*/
+
+body {
+  background-color: #FF8E41;
+}
+
+#wrapper {
+  background-color: #3D89E8;
+  margin-right: auto;
+  margin-left: auto;
+  width: 960px;
+}
+
+header {
+  background-color: #379FE8;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 940px;
+}
+nav {
+  background-color: lightgrey;
+  width: 960px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 26px;
+}
+
+nav ul li {
+  background-color: #30CAE8;
+  display: inline-block;
+}
+
+aside {
+  background-color: #39E8B4;
+  border-right: 5px solid black;
+  margin-top: 58px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+  width: 220px;
+  float: left;
+}
+
+#content {
+  background-color: #26E872;
+  margin-top: 58px;
+  margin-right: 10px;
+  width: 680px;
+  float: right;
+}
+
+footer {
+  background-color: #5BE83D;
+  margin-top: 2000px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 940px;
+  clear: both; /*pour retrouver le flux normal*/
+}
+
+
+/*taille pour tablette de 768px*/
+
+@media screen and (max-width: 768px) {
+  #wrapper, header, footer, nav {
+    width: 768px;
+    margin: 0px;
+  }
+
+  nav {
+    text-align: center;
+    background-image: none;
+    border-top-color: #bfbfbf;
+    border-top-style: double;
+    border-top-width: 4px;
+  }
+
+  nav ul li a {
+    background-color: #dedede ;
+    line-height: 60px;
+    font-size: 40px;
+  }
+
+  header, footer, nav {
+    width: 748px;
+  }
+
+  #content, aside {
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 728px;
+  }
+
+  .oscarMain {
+    margin-right: 30px;
+    margin-top: 0px;
+    width: 150px;
+    height: 394px;
+  }
+
+  aside{
+    border-right: none;
+    border-top: 2px solid #e8e8e8;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sideBlock {
+    width: 46%;
+    float: left;
+  }
+
+  .overHyped {
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+
+}

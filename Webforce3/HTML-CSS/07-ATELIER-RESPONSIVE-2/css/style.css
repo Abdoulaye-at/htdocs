@@ -1,0 +1,191 @@
+header a {
+    color: #000;
+    text-decoration: none; 
+    text-transform: uppercase;
+}
+
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    display: inline-block;
+    width: 280px;
+    text-align: center;
+}
+
+
+a:hover {
+    color:  red;
+}
+
+header ul li.current a {
+    color: red;
+}
+
+
+
+header section img {
+    width: 225px;
+    height: auto;
+    margin-top: 90px;
+    margin-left: 50px;
+    border-radius: 20%;
+}
+
+section img {
+    width: 460px;
+    height: auto;
+}
+/*-------------------------------------------------------------------
+Style du main
+---------------------------------------------------------------------*/
+body {
+    background-color: #130061;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+
+main {
+    
+    width: 100%;
+    max-width: 960px;
+    background: #FFF;
+    margin: 80px auto 80px auto;
+    border-radius: 5px;
+    
+    /*- box-shadox: offset-x (décalage vertical) | offset-y (décalage horizontal) | blur-radius (flou) | color -*/
+    box-shadow: 8px 8px 10px #000;
+    
+    padding: 5px;
+    
+    overflow: hidden;
+}
+    
+.row h1 {
+    text-align: center;
+    
+    font-weight: normal;
+    
+    border-bottom: 1px dashed #000
+}    
+    
+    
+    
+/*--------------------------------------------------------
+                        HEADER
+---------------------------------------------------------*/    
+    
+header section {
+    width: 100%;
+    height: 392px;
+    background: url(../images/plage.jpg) no-repeat;
+    background-size: cover;
+}    
+    
+/*--------------------------------------------------------
+                    ILLUSTRATION ET ARTICLE
+---------------------------------------------------------*/      
+
+/*----------1ère possibilité-----------*/
+/*-----------------Box-sizing: border | padding-box (inclure le paggind dans la width)------------------------*/
+/*----------2ème possibilité-----------*/
+/*----- width: calc(50% - 20px);
+        margin 0 10px 0 10px;    --------*/
+
+
+.row .col-xs-6 {
+    width: 50%;
+    height: auto;
+    float: left;
+}   
+    
+.row .col-xs-6 img {
+    max-width: 100%;
+}    
+/*--------------------------------------------------------
+                        FOOTER
+---------------------------------------------------------*/     
+    
+footer {
+    width: 100%;
+    height: auto;
+    float: left;
+    background-color: #BBCFFF;
+}    
+.gmap {
+    width: 33%;
+    height: auto;
+    float: left;
+}
+
+iframe {
+    width: 315px;
+    height: auto
+}
+
+/*--------------------------------------------------------
+                        NEWSLETTER
+---------------------------------------------------------*/  
+.newsletter {
+    width: 33%;
+    height: auto;
+    float: left;
+}
+
+.newsletter form fieldset {
+    border: 2px solid #FFF;
+    height: 140px;
+    border-radius: 5%;
+}
+
+.newsletter input {
+    width: 95%;
+    height:25px;
+    margin-top: 3px;
+}
+
+.newsletter input[type=submit] {
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------
+                        CONTACT
+---------------------------------------------------------*/     
+    
+section a {
+    color: black;
+    text-decoration: none;
+}
+
+section adress {
+    padding-left: 3px;    
+}
+
+section h3 {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+    
+.contact {
+    width: 33%;
+    height: 145px;
+    margin-top: 10px;   
+    float: left;
+    /*border: 1px solid grey;*/
+}  
+
+.contact address a:hover {
+    text-decoration: underline;
+}
+
+.contact address {
+   padding-left: 15px;
+}

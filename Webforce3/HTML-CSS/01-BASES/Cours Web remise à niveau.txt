@@ -1,0 +1,60 @@
+WWW: World Wide Web réseau d’ordi liés entre eux
+
+W3C: World Wide Web Consortium; Organisme à but non lucratif pour normer/standardiser le contenu web
+
+HTTP/S: Hypertext transfer protocol protocole web qui permet d’afficher le contenu (audio , img, texte, vidéo)
+        s/ secure, permet de crypter les données
+
+DHCP : Sert à attribuer automatiquement une adresse IP
+
+DNS: Domaine name system permet d’associer le nom de domaine et l’adresse ip  possibilité d’en avoir plusieurs en cas de dysfonctionnement
+
+Hébergement: Entreprise qui a pour but de stocker un site sur un serveur 
+Mutualisé: Serveur commun à plusieurs clients (coût moindre)
+Dédié: Serveur qui nous est propre, la configuration se fait personnellement
+Virtualisé (VPS): Chaque client a sa propre adresse IP, celui-ci choisit sa configuration
+“vps.net”
+
+FTP: File transfert protocol; logiciel permettant de mettre à jour ou récupérer des fichiers en lignes 
+ 
+SMTP (Simple Mail Transfer Protocol): Protocole dédié à l’envoi d’email
+Pop: récupérer mail
+Emap: synchronisation des mails
+
+SSH: Protocole sécurisé qui nous permet de communiquer avec notre serveur distant via lignes de commandes
+
+Proxy: Programme servant d'intermédiaire pour accéder à un autre réseau
+“anonymous”
+
+Pare-feu: Permet d’éviter les intrusions extérieures
+
+CDN: Content delivery network Réseau de serveurs répartis à travers le monde; cela permet communiquer avec le serveur le plus proche.
+
+Nom de domaine: Adresse qui nous permet d’accéder à un site web
+
+Adresse ip:
+Dynamique change régulièrement
+Statique toujours identique client pro généralement 
+
+TCP/IP: Protocole d’échange de données entre machines 
+
+Moteur de rendu:  
+Interprète le codage sur le navigateur côté client
+
+
+Client / Serveur:
+http://www.jacksay.com/images/php/schema-serveur.svg
+Lecture du html css js se fait du côté client
+
+Wamp: (Windows Apache MySQL PHP)
+“Ampps”
+
+
+
+
+HTML (Hypertext Markup Language): 
+CSS:
+JS:
+PHP: 
+MySQL: Moteur de serveur qui permet de gérer les bases de données
+

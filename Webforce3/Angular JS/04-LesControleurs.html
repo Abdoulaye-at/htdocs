@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=" crossorigin="anonymous"></script>
+  </head>
+
+  <body ng-app>
+    <!--
+      CONSIGNE :
+      1. Créer un formulaire HTML comprenant 2 champs input:
+          nom et prénom
+      2. Définissez la directive ng-model pour chaque champ.
+      3. Afficher dans un paragraphe le nom et prénom
+      4. BONUS : Afficehr uniquement ce paragraphe si les champs nom et prénoms ont été remplis
+    -->
+    <h3>Ajouter un contact</h3>
+    <form>
+      <p>
+        <input type="text" placeholder="Saisissez votre Nom" ng-model="contact.prenom">
+      </p>
+      <p>
+        <input type="text" placeholder="Saisissez votre Prénom" ng-model="contact.nom">
+      </p>
+
+      <p ng-show="contact.prenom && contact.nom"></p>
+        Vous avez saisi : {{contact.prenom}} {{contact.nom}}
+      <pre>{{contact}}</pre>
+    </form>
+  </body>
+</html>

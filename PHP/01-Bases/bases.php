@@ -266,7 +266,7 @@ if ($couleur == 'bleu') {
 echo '<h2> Fonctions prédéfinies </h2>';
 //--------------------------------------//
 
-// Définition : une fonction prédééfinie  premet de réaliser un traitement spécifique prévu dans le language PHP.
+// Définition : une fonction prédéfinie permet de réaliser un traitement spécifique prévu dans le language PHP.
 
 //-----------
 $email1 = 'prenom@site.fr';
@@ -288,17 +288,17 @@ echo '<br>';
 
 //****
 
-$phrase = 'mettez une phrase ici à cet endroit';
+$phrase = 'mettez une phrase à cet endroit';
 echo strlen($phrase); // affiche la longueur des caractères
 
 /*
   strlen() retourne :
-    succes : integrer
+    succes : integer
     echec  : booleen FALSE
 */
 
 //---------------
-$texte = "lorem ipsumLorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 g";
+$texte = "Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 g";
 
 echo substr($texte, 0, 20) . '...<a href=""> lire la suite... </a>';
 
@@ -322,18 +322,18 @@ echo strtolower($message) . '<br>';
 echo strtoupper($message) . '<br>';
 
 echo strlen($message) . '<br>'; // affiche la longueur de la chaine de caractères avec espaces
-echo strlen(trim($message)) . '<br>'; // affiche la longueur de la chaine de caractères sans avec espaces
+echo strlen(trim($message)) . '<br>'; // affiche la longueur de la chaine de caractères sans espaces
 
 echo '<br>';
 //--------------
 $message = '<h1> Hello World ! </h1> <p>How are you ?</p>';
-echo strip_tags($message);
+echo strip_tags($message); // On annule les balises html
 
 //---------------------------------------//
 echo '<h2> Fonctions utilisateur </h2>';
 //--------------------------------------//
 
-// Les fonctions utilisateur ne sont pas définies dans le language
+// Les fonctions utilisateur ne sont pas prédéfinies dans le language PHP
 
 // Déclaration d'une fonction
  function separation() {
@@ -346,7 +346,7 @@ echo '<h2> Fonctions utilisateur </h2>';
 
  //-----------------
  // Les fonctions avec des paramètres:
- // les paramètres d'une fonction sont destinés à recevoir une valeur qui permet de compléter ou de mofifier le comporteent de la fonction
+ // les paramètres d'une fonction sont destinés à recevoir une valeur qui permet de compléter ou de modifier le comportement de la fonction
 
 function bonjour($qui) {
   return 'bonjour' . $qui . '<br>';
@@ -370,6 +370,261 @@ function appliqueTva2($nombre, $taux){
 }
 
 echo appliqueTva2(100,3);
+echo '<br>';
+
+// On peut spécifier une valeur par défaut à un paramètre dans les parenthèses lors de la déclaration de la fonction. Dans ce cas, si la valeur n'est pas pasée lors de l'appel, le paramètre prend cette valeur par défaut.
+
+//-----------------------
+// Exercice :
+
+function meteo($saison, $temperature){
+  echo "Nous sommes en $saison et il fait $temperature degrés <br>";
+}
+
+meteo('hiver', 2);
+meteo('printemps', 1);
+
+// Au sein d'une nouvelle fonction exoMeteo(), afficher l'article "au" pour le printemps et "en" pour les autres saisons.
+
+function exoMeteo($saisons, $temperature){
+  $saisons == 'printemps';
+
+  switch($saisons) {
+    case 'printemps' : echo "Nous sommes au $saisons et il fait $temperature degrés <br>"; break;
+    default: echo "Nous sommes en $saisons et il fait $temperature degrés <br>";
+  }
+
+
+  // correction version ternaire
+  $article = ($saisons == 'printemps') ? 'au' : 'en';
+  echo "Nous sommes $article $saisons et il fait $temperature degrés <br>";
+}
+
+exoMeteo('hiver', 10);
+exoMeteo('printemps', 20);
+
+//-----------------------------
+//Variables globales et locales
+
+function jourSemaine(){
+  $jour = 'mercredi';
+  return $jour; // retourne la valeur de $jour à l'exterieur de la fonction
+}
+
+echo jourSemaine() . '<br>';
+//echo $jour; // une erreur s'affiche : on appelle une variable locale dans un espace global
+
+//-----------
+$pays = 'France';
+function affichagePays(){
+  global $pays; // 'global' nous permet d'utiliser une variable déclarée dans l'espace global à l'intérieur de la fonction.
+  echo $pays;
+}
+
+affichagePays();
+
+
+//------------------------------------------------//
+ echo '<h2> Fonctions itératives : boucle </h2>';
+//------------------------------------------------//
+
+// Boucle while
+$i =  0;
+while($i < 3){
+  echo "$i---";
+  $i++;
+}
+echo '<br>';
+
+//--------------
+// Exercice :
+// A l'aide d'une boucle while, afficher dans un selecteur les années de 1917 à 2017
+//--------------
+
+$annees = 1917;
+echo "<select>";
+while($annees <= 2017) {
+  echo "<option>$annees</option>";
+  $annees++;
+}
+echo "</select>";
+echo '<br>';
+
+// Boucle for
+for($j = 0; $j <= 5; $j++) {
+  print $j . '<br>';
+}
+
+
+//--------------
+// Exercice :
+// Afficher dans un selecteur les noms de 1 à 30 avec une boucle for
+//--------------
+
+echo '<select>';
+for($j = 1; $j <= 30; $j++) {
+  print "<option>$j </option>";
+}
+echo '</select>';
+
+
+//--------------
+// Exercice :
+// Afficher les chiffres de 0 à 9 sur la même ligne dans une table html
+//--------------
+echo '<table border ="1">';
+  echo '<tr>';
+    for($j = 1; $j <= 9; $j++) {
+      print "<td>$j </td>";
+    }
+  echo '</tr>';
+echo '</table>';
+
+echo '<br>';
+
+
+// Boucle do while
+// La boucle do while a la particularité de s'executer au moins une fois, puis tant que la condition est vraie
+
+$meteo = 'beau';
+do {
+  echo "Je m'affiche au 1er tour de boucle";
+} while ($meteo != 'beau'); // On sort de la boucle si la condition n'est pas vraie
+
+echo '<hr>';
+$i=0;
+do {
+  echo "Je suis au tour de boucle n° $i ! <br>";
+  $i++;
+} while ($i < 3);
+
+//------------------------------------------------//
+ echo '<h2> Les tableaux de données : ARRAY </h2>';
+//------------------------------------------------//
+// Un tableau se déclare un peu comme une variable dans laquelle on peut stocker un ensemble de valeurs. Ces valeurs peuvent être de n'importe quel type.
+
+//Déclaration d'un array
+$liste = array('gregoire', 'nathalie', 'emilie', 'francois', 'georges');
+
+// echo $liste; // erreur : on ne peut pas afficher directement un array
+
+// Pour afficher rapidement en phase de devp le contenbnu d'un array :
+echo '<pre>';
+  var_dump($liste);
+echo '</pre>';
+
+echo '<pre>';
+print_r($liste);
+echo '</pre>';
+
+// Autre manière d'affecter des valeurs à un array:
+$tab[] = 'France'; // Les crochets vides permettent d'ajouter la valeur indiquée au 1er indice disponible
+$tab[] = 'Italie';
+$tab[] = 'Suisse';
+$tab[] = 'Portugal';
+
+echo '<pre>';
+print_r($tab);
+echo '</pre>';
+
+echo $tab[1]; /// affiche 'Italie'
+echo '<br>';
+
+//-------------------
+// Tableau associatif
+$couleur = array ('j'=>'jaune', 'b'=>'bleu', 'v'=>'vert');
+
+// Pour accéder à n élement du tableau associatif :
+echo 'La seconde couleur de notre tableau est le ' . $couleur['b'] . '<br>';
+echo "La seconde couleur de notre tableau est le $couleur[b]" . '<br>'; // Un array écrit dans des guillemets perd les quotes autour de son indice
+
+//--------
+// Quelques fonctions prédefinies sur les arrays :
+echo 'Taille du tableau :' . count($couleur) . '<br>'; // compte le nombre d'éléments dans le tableau
+echo 'Taille du tableau :' . sizeof($couleur) . '<br>'; // 'sizeof' a la même fonction que 'count'
+
+$chaine = implode(' -- ', $couleur); // fonction prédefinie qui rassemble les éléments d'un array en une chaîne
+echo $chaine . '<br>'; // $chaine est un string contenant les valeurs de l'array
+
+$couleur2 = explode(' -- ', $chaine); // fonction prédefinie qui transforme une chaîne contenant un séparateur comme le '-' en un array
+  var_dump($couleur2);
+
+
+//------------------------------------//
+ echo '<h2> La boucle foreach </h2>';
+//------------------------------------//
+// La boucle foreach permet de parcourir un array ou un objet de manière automatique
+echo '<pre>'; print_r($tab); echo '</pre>';
+
+foreach($tab as $valeur){
+  echo $valeur . '<br>';
+}
+
+// Pour parcourir les indices et les valeurs :
+  foreach($tab as $indice => $valeur) { // quand il y a 2 variables, la 1ere parcourt la colonne des indices et la seconde la colonne des valeurs
+    echo $indice . ' correspond à ' . $valeur . '<br>';
+  }
+
+/*--------------------
+EXERCICE :
+// Écrire un array avec les indices prenom, nom, email, telephone, et y associer des valeurs.
+Puis vous affichez avec une boucle foreach les indices et les valeurs dans des <p>, sauf pour les prénoms qui doivent être dans un <h1>
+------------------*/
+
+
+$Coordonnees = array ('prenom : '    => 'Abdoulaye',
+                      'nom : '       => 'Thiaw',
+                      'email : '     => 'Abdoulaye.at@gmail.com',
+                      'telephone : ' => '07.80.90.40.50');
+
+foreach($Coordonnees as $indice => $valeur) { // quand il y a 2 variables, la 1ere parcourt la colonne des indices et la seconde la colonne des valeurs
+
+  if($indice == 'prenom : ') {
+    echo "<h3> $indice $valeur </h3> ";
+  } else {
+    echo "<p> $indice $valeur </p> ";
+  }
+}
+
+//-------------------------------------------------//
+ echo '<h2> Les tableaux multidimensionnels </h2>';
+//-------------------------------------------------//
+
+// Nous parlons de tableaux multidimensionnels quand un tableau est contenu dans un autre tableau. Chaque tableau représente une dimension.
+
+// Création d'un tableau multidimensionnel :
+$tab_multi = array(
+                  0 => array ('prenom'=>'matthieu', 'nom'=> 'locheron', 'tel'=>'07.20.20.31.77'),
+                  1 => array ('prenom'=>'son', 'nom'=> 'goku', 'tel'=>'01.50.26.11.88'),
+                  2 => array ('prenom'=>'pierre', 'nom'=> 'dupont'),
+              );
+
+echo '<pre>'; print_r($tab_multi); echo'</pre>';
+
+// Pour accéder à la valeur 'matthieu' :
+echo $tab_multi[0]['prenom']. '<br>'; // Nous entrons dans $tab_multi à l'indice 0 pour aller ensuite à l'indice 'prenom'
+
+// Parcourir le tableau multidimensionnel avec une boucle for :
+for($i = 0; $i < count($tab_multi); $i++) {
+  echo $tab_multi[$i]['prenom']. '<br>';
+}
+
+/* Exercice :
+    afficher les prénoms de $tab_multi avec une boucle foreach
+*/
+
+foreach ($tab_multi as $indice => $valeur) {
+  echo $valeur['prenom']. '<br>';
+}
+
+
+
+
+
+
+
+
+
 
 
 

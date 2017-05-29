@@ -618,17 +618,68 @@ foreach ($tab_multi as $indice => $valeur) {
 }
 
 
+/**************************************************/
+echo '<h2> Iclusion de fichiers </h2>';
+//**************************************************/
+
+echo 'Première inclusion : ';
+include('exemple.inc.php'); // on précise le chemin du fichier à inclure
+
+echo '<br> Deuxième inclusion : ';
+include_once('exemple.inc.php'); // le once vérifie si le fichier à déja été inclus, et si c'est la cas, il ne fait pas l'inclusion
+
+echo '<br> Troisième inclusion : ';
+require('exemple.inc.php');
+
+echo '<br> Quatrième inclusion : ';
+require_once('exemple.inc.php');
+
+/*
+  Différence entre include et require :
+  Elle apparaît uniquement si on ne parvient pas à inclure le fichier demandé :
+  - include : génère une erreur de type warning, on continue l'execution du script
+  - require : génère une erreur de type fatal error et stoppe l'éxecution du script
+
+  Notez que le .inc dans le nom du fichier est là à titre indicatif précisant aux developpeurs qu'il s'agit d'un fichier d'inclusion, et non pas d'une page à part entière
+*/
 
 
+/**************************************/
+echo '<h2> Gestion des dates </h2>';
+//**************************************/
 
+// La fonction prédéfinie date() renvoie la date du jour selon le format spécifié :
+echo date('d/m/y H:i:s <br>'); // affiche la date au format JJ/MM/AAAA ainsi que heure H/M/S
 
+echo date('y-m-d'); // affiche la date au format AA-MM-JJ. Notez que l'on peut changer les séparateurs
+echo'<br>';
 
+//------------------
+/*
+Définition de timestamp Unix :
+Le timestamp est le nombre de secondes écoulées entre une date et le 1er janvier 1970 à 00:00:00.
+cette date correspond à la création d'UNIX, premier système d'exploitation.
 
+On utilise le timestamp dans de nombreux languages de programmation dont le PHP et le javascript
+*/
 
+// La fonction prédefinie time() retourne l'heure courante en timestamp
+ echo time();
+echo'<br>';
 
+// On va utiliser le timestamp pour passer une date d'un format vers un autre format
+$dateJour = strtotime('29-05-2017'); // transforme la date en timestamp
 
+echo $dateJour . '<br>';
 
+$dateFormat = strftime('%Y-%m-%d', $dateJour); // transforme un timestamp en date au format indiqué
+echo $dateFormat . '<br>';
 
+//---------------
+// Créer une date avec la classe dateTime (approche objet) :
+$date = new DateTime('11-04-2017'); // on crée un objet $date de type DateTime en utilisant le mot clé new suivi du nom de la classe DateTime. On passe une date en argument de DateTime.
+
+echo $date->format('Y-m-d'); // on peut formater l'objet $date en appelant sa méthode format() et en lui indiquant les paramètres du format souhaité, ici Y-m-d
 
 
 

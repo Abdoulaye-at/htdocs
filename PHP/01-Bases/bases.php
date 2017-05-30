@@ -681,6 +681,66 @@ $date = new DateTime('11-04-2017'); // on crée un objet $date de type DateTime 
 
 echo $date->format('Y-m-d'); // on peut formater l'objet $date en appelant sa méthode format() et en lui indiquant les paramètres du format souhaité, ici Y-m-d
 
+//-----------------------------------------//
+echo '<h2> Introduction aux objets </h2>';
+//----------------------------------------//
+// Un objet est un autre type de données. Il permet de regrouper des informations : on peut y déclarer des variables appelées attributs ou propriétés, ainsi que des fonctions appelées méthodes.
+
+// Exemple 1 :
+// Nous créons une classe appelée Etudiant qui nous permet de créer des objets de type Etudiant. Ils auront les attributs et les méthodes de cette classe
+class Etudiant {
+  public $prenom = 'Julien';
+  public $age = '25'; // $prenom et $age sont des attributs, public permet de préciser qu'ils seront accessibles partout.
+
+  public function pays(){ // pays est une méthode
+    return 'France';
+  }
+}
+
+$objet = new Etudiant(); // new est un mot clé permettant d'instancier la classe et d'en faire un objet
+
+echo '<pre>'; var_dump($objet); echo '</pre>';
+
+echo $objet ->prenom . '<br>'; // pour accéder à la propriété prenom j'utilise une flèche '->';
+echo $objet ->age . '<br>';
+echo $objet ->pays() . '<br>'; // appel d'une méthode toujours avec les parenthèses
+
+// Exemple 2 : un panier d'achat de site e-commerce :
+class Panier {
+  public function ajout_article($article){
+    // ici le code pour ajouter l'article au panier
+    return "L'article $article a bien été ajouté au panier";
+  }
+}
+
+// Création d'un objet panier :
+$panier = new Panier();
+echo $panier->ajout_article('Pull'); // appelle la méthode ajout_article en lui passant l'argument 'pull' pour l'ajouter au panier.
+
+//**********************************************************************//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

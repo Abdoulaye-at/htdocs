@@ -51,6 +51,7 @@ if(!empty($_POST)){
     if($membre->rowCount() > 0){
       $contenu .= '<div class="bg-danger">Pseudo indisponible, veuilez en choisir un autre</div>';
     } else {
+      $_POST['mdp'] = md5($_POST['mdp']); // on encrypte le mot de passe avec la fonction prédéfinie md5
       executeRequete('INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite, ville, code_postal, adresse, statut) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :civilite, :ville, :code_postal, :adresse, 0)',
       array(':pseudo'=>$_POST['pseudo'],
             ':mdp'=>$_POST['mdp'],

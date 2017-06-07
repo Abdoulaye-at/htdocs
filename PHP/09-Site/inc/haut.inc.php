@@ -67,18 +67,11 @@
                       echo "<a href='#' class='dropdown-toggle' data-toggle='dropdown'>BACK-OFFICE</a>";
                         echo '<ul class="dropdown-menu">';
                           echo '<li><a href="'. RACINE_SITE .'admin/gestion_boutique.php">Gestion de la boutique</a></li>';
-                        echo '</ul>';
-                        echo '<ul class="dropdown-menu">';
                           echo '<li><a href="'. RACINE_SITE .'admin/gestion_commande.php">Gestion des commandes</a></li>';
-                        echo '</ul>';
-                        echo '<ul class="dropdown-menu">';
                           echo '<li><a href="'. RACINE_SITE .'admin/gestion_membre.php">Gestion des membres</a></li>';
                         echo '</ul>';
                     echo "</li>";
                   }
-
-
-
 
                   ?>
 

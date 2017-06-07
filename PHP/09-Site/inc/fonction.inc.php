@@ -37,7 +37,7 @@ function executeRequete($req, $param = array()){
   $r = $pdo->prepare($req);
   $succes = $r->execute($param);
 
-  if($succes){
+  if(!$succes){
     die('Erreur sur la requête SQL'); // arrête le script et affiche un msg d'erreur
   }
 

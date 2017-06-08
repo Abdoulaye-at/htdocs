@@ -1,5 +1,18 @@
-section div img{
-  width: 200px;
+header h1{
+  font-family:magra, bold;
+  font-size: 150px;
+}
+
+.owl-carousel{
+  width: 50px;
+}
+
+img{
+  width: 100px;
+}
+
+.owl-nav{
+  color:red;
 }
 
 .col-xs-4 {

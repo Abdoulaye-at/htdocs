@@ -79,9 +79,7 @@ $contenu .= '</div>';
   Note : utiliser la variable $aside pour afficher le contenu.
 */
 
-/*
 
-*/
 
 //------------ AFFICHAGE ---------//
 

@@ -7,7 +7,7 @@
 $contenu = '';
 
 
-// 1- Cpnnexxion à la BDD :
+// 1- Connexxion à la BDD :
 $pdo = new PDO('mysql:host=localhost;dbname=contacts', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
 
@@ -30,7 +30,7 @@ $contenu .= '<table border="1">';
 						<td>'. $contact['telephone'] .'</td>
 						<td>
 						<a href="?id_contact='. $contact['id_contact'] .'">autres infos</a>
-						</td>	
+						</td>
 					 </tr>';
 	}
 

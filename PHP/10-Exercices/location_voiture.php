@@ -24,6 +24,11 @@ function prixLoc($categorie, $jours){
   $resultat = $prix_jour * $jours; // Prix de la location à la journée
 
   return "<p class='lead'> Le véhicule vaut $resultat € pour $_POST[jours] jours.</p>";
+
+  // Solution courte
+  global $categories;
+  $prixLoc = $nbJours * $categories[$categorie]; // $categorie contient la valeur de la catégorie saisie, il s'agit ici de l'array $categories. Ainsi, $categories[$categorie]
+  // donne la valeur correspondante, c'est à dire le prix
 }
 
 if(!empty($_POST)) {

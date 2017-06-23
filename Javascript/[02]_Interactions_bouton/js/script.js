@@ -12,11 +12,11 @@ function display(e){
   screenPlay[0].style.display = 'block';
   }
 
-function pacman(e){
-  var element = e.name
-
-  //Show selected element
-  var screenPlay =  document.getElementsByName( element + '-content' )
-  screenPlay[0].style.display = 'block';
-  console.log(screenPlay)
-  }
+// function pacman(e){
+//   var element = e.name;
+//
+//   //Show selected element
+//   var screenPlay =  document.getElementsByName( element + '-content' )
+//   screenPlay[0].style.display = 'block';
+//   console.log(screenPlay)
+//   }

@@ -15,20 +15,25 @@
 
 
 // Variables
-$contenu = '';
+$resultat = '';
 
 // Fonction de conversion
 function conversion($montant, $devise){
+  if (is_numeric($montant) && $montant > 0) {
+    # code...
 
-  if ($devise == 'EUR') {
-    echo $montant . ' Euro = ' . $montant / 1.085965 .' dollards américains</p>';
+    if ($devise == 'EUR') {
+      $resultat =  $montant . ' Euro = ' . $montant * 1.085965 .' dollards américains</p>';
 
-  } elseif($devise == 'USD'){
-    echo $montant . ' Dollards américains = ' . $montant*1.085965 .' Euros</p>';
+    } elseif($devise == 'USD'){
+      $resultat = $montant . ' Dollards américains = ' . $montant / 1.085965 .' Euros</p>';
 
-  } else {
-    echo '<p class="lead">Veuillez saisir une devise de type EUR ou USD !</p>';
+    } else {
+      $resultat = '<p class="lead">Veuillez entrer un nombre valide !</p>';
+    }
   }
+
+  echo $resultat;
 }
 
 conversion(100, 'EUR');
@@ -43,6 +48,6 @@ conversion(100, 'EUR');
     <link rel="stylesheet" href="inc/css/bootstrap.min.css">
   </head>
   <body>
-
+    <?= $resultat;  ?>
   </body>
 </html>

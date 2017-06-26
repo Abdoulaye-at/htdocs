@@ -69,6 +69,7 @@ $(function(){
 			content += '<li><a href="#">' + users[i].name + '</a></li>'
 		}
 		$("#right_column ul").html(content)
+		eventClickBaliseUser();
 	});
 
 	request.fail(function( jqXHR, textStatus ){
@@ -115,7 +116,18 @@ $(function(){
 		alert( "Request failed: " + textStatus )
 	});
 
+	//************* EXERCICE 7 ********** //
 
-
+	function eventClickBaliseUser(){
+		request.done(function(users){
+			$("#right_column a").click(function(){
+				event.preventDefault();
+				for (var i = 0; i < users.length; i++) {
+					if(users[i].name == $(this).text())
+					console.log(users[i].email)
+				}
+			})
+		});
+	}
 
 });

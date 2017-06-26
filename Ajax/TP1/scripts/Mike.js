@@ -24,7 +24,7 @@ $(function(){
 
 	/************************* Exercice 2 *************************/
 
-	$(".one_third").one("click", function(){	// Function se declanche au click sur l'id imagesMike1 une seul fois
+	$(".one_third").one("click", function(){	// Function se declenche au click sur l'id imagesMike1 une seul fois
 		$("#imagesMike1").attr("src", "http://www.ilmostardino.it/wp-content/uploads/2017/06/EnriqueRamosGergati2-290x180.jpg"); // Modifier la source de l'image
 		$("#imagesMike2").attr("src", "http://www.ilmostardino.it/wp-content/uploads/2016/04/EnriqueRamosDiBella5-290x180.jpg"); // Modifier la source de l'image
 		$("#imagesMike3").attr("src", "https://www.westpointaog.org/image/CDT-Tanner-Plomb-16-4.jpg"); // Modifier la source de l'image
@@ -41,8 +41,8 @@ $(function(){
 
 
 	/************************* Exercice 4 *************************/
-	$(".more > a").click(function(){ // Function se declanche au click sur la balise a qui sz trouve dans class more
-		event.preventDefault(); // Annuler l'evennement par default
+	$(".one_quarter .more > a").click(function(){ // Function se declanche au click sur la balise a qui se trouve dans class more
+		event.preventDefault(); // Annuler l'evenement par default
 
 		console.log($(this)) // Balise a selectionner
 		console.log($(this).parent()) // Balise p class more
@@ -52,6 +52,67 @@ $(function(){
 
 		$(this).parent().parent().children("p").eq(0).append("Mike le roi!!! OOUUIIII long via a Mike! Long bie a Mike")
 
+	});
+
+
+	/************************* Exercice 5 *************************/
+	var request = $.ajax({ // Envoi d'une request sur une URL avec une methode
+		url: "https://jsonplaceholder.typicode.com/users",
+		method: "GET",
+		dataType: "json" // optionnel, défini le type de données reçues par le serveur
+	});
+
+	request.done(function( users ) {
+		let content ="";
+		console.log( users );
+		for( var i = 0; i < users.length; i++){
+			content += '<li><a href="#">' + users[i].name + '</a></li>'
+		}
+		$("#right_column ul").html(content)
+	});
+
+	request.fail(function( jqXHR, textStatus ){
+		alert( "Request failed: " + textStatus )
+	});
+
+
+	/************************* Exercice 6 *************************/
+	var photosRequest = $.ajax({
+		url: "https://jsonplaceholder.typicode.com/photos",
+		method: "GET",
+		dataType: "json"
+	});
+
+	photosRequest.done(function( photos ) {
+
+		console.log( photos );
+		console.log($("#posts img"))
+		for( var i = 0; i < 2; i++){
+				$("#posts img").eq(i).attr("src", photos[i].url);
+		}
+		console.log( photos );
+
+		photosRequest.done(function( title ) {
+			$("#posts .more > a").click(function(){
+				event.preventDefault();
+
+				console.log($(this)) // Balise a
+				console.log($(this).parent()) // Balise p
+				console.log($(this).parent().parent()) // Balise article
+				console.log($(this).parent().parent().parent().children("img")) // Balise p
+
+				for( var i = 0; i < 2; i++){
+					if(photos[i].url == $(this).parent().parent().parent().children("img").attr("src")){
+						$(this).parent().parent().children("p").append(photos[i].title)
+					}
+				}
+
+			});
+		});
+	});
+
+	photosRequest.fail(function( jqXHR, textStatus ){
+		alert( "Request failed: " + textStatus )
 	});
 
 

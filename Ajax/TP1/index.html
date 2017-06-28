@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 	<head>
 		<title>Basic 89</title>
-		<meta charset="iso-8859-1">
+		<meta charset="utf-8">
 		<link rel="stylesheet" href="styles/layout.css" type="text/css">
 		<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
 	</head>
@@ -36,34 +36,36 @@
 			<!-- main content -->
 			<div id="homepage">
 			  <!-- services area -->
+				<div id="ajout_article">
 			  <section id="services" class="clear">
 				<article class="one_quarter">
 				  <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
 				  <strong>Lorum ipsum dolor</strong>
-				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+				  <p class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
 				  <p class="more"><a href="#">Read More 4 &raquo;</a></p>
 				</article>
 				<article class="one_quarter">
 				  <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
 				  <strong>Lorum ipsum dolor</strong>
-				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+				  <p class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
 				  <p class="more"><a href="#">Read More 3 &raquo;</a></p>
 				</article>
 				<article class="one_quarter">
 				  <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
 				  <strong>Lorum ipsum dolor</strong>
-				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+				  <p class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
 				  <p class="more"><a href="#">Read More 2 &raquo;</a></p>
 				</article>
 				<article class="one_quarter lastbox">
 				  <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
 				  <strong>Lorum ipsum dolor</strong>
-				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+				  <p class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
 				  <p class="more">
 						<a href="#">Read More 1 &raquo;</a>
 					</p>
 				</article>
 			  </section>
+				</div>
 			  <!-- / services area -->
 			  <!-- ########################################################################################## -->
 			  <!-- ########################################################################################## -->
@@ -135,10 +137,65 @@
 			<!-- / content body -->
 		  </div>
 		</div>
+
+		<form class="form-horizontal">
+			<fieldset>
+
+			<!-- Form Name -->
+			<legend>Form Name</legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="name">Full Name</label>
+			  <div class="col-md-4">
+			  <input id="name" name="name" placeholder="Your name" class="form-control input-md" type="text">
+			  <span class="help-block">help</span>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="email">Email</label>
+			  <div class="col-md-4">
+			  <input id="email" name="email" placeholder="Your email" class="form-control input-md" type="text">
+			  <span class="help-block">help</span>
+			  </div>
+			</div>
+
+			<!-- Password input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="password">Password</label>
+			  <div class="col-md-4">
+			    <input id="password" name="password" placeholder="Your password" class="form-control input-md" type="password">
+			    <span class="help-block">help</span>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="phone">Phone</label>
+			  <div class="col-md-4">
+			  <input id="phone" name="phone" placeholder="Your phone..." class="form-control input-md" type="text">
+			  <span class="help-block">help</span>
+			  </div>
+			</div>
+
+			<!-- Button (Double) -->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="send">Validation</label>
+			  <div class="col-md-8">
+			    <button id="send" type="submit" name="send" class="btn btn-success">Envoi</button>
+			    <button id="reset" type="reset" name="reset" class="btn btn-danger">Reset</button>
+			  </div>
+			</div>
+
+			</fieldset>
+		</form>
+
 		<!-- Footer -->
 		<div class="wrapper row3">
 		  <footer id="footer" class="clear">
-			<p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - <a href="#">Domain Name</a></p>
+			<p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Domain Name</a></p>
 			<p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
 		  </footer>
 		</div>

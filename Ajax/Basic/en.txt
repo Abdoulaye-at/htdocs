@@ -1,0 +1,9 @@
+Travail en groupe de 2
+
+Partie Ajax:
+	Créé 2 requete Ajax. La premier, une requete en GET avec une data en parametre(ex: data:{id:2}) permettant de récupérer l'id, le name, le website, le phone d'un utilisateur et l'afficher dans les input.
+	La seconde requete en POST, permettra de modifier les informations d'un utilisateur.
+	Afficher un popup en cas de réussite.
+
+Partie PHP:
+	Créé les 2 requete coté back. 2 fichier php, l'un pour la methode GET, l'autre pour la methode POST.

@@ -1,7 +1,7 @@
 <?php
 
 function debug($var){
-  echo'<div style="background:orange; padding: 5px;">';
+  echo '<div style="background:orange; padding: 5px;">';
     echo '<pre>'; print_r($var); echo '</pre>';
   echo '</div>';
 }

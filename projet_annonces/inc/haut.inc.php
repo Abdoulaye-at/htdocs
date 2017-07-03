@@ -53,7 +53,7 @@
 
                     //echo '<li><a href="'. RACINE_SITE .'panier.php">Panier ('. quantiteProduit() .')</a></li>';
 
-                    //if(internauteEstConnecteEtEstAdmin()){
+                    if(internauteEstConnecteEtEstAdmin()){
                       // Pour l'admin, on affiche les liens vers le back-office :
                       echo "<li class='dropdown'>";
                         echo "<a href='#' class='dropdown-toggle' data-toggle='dropdown'>BACK-OFFICE</a>";
@@ -62,7 +62,7 @@
                             echo '<li><a href="'. RACINE_SITE .'/admin/gestion_membre.php">Gestion des membres</a></li>';
                           echo '</ul>';
                       echo "</li>";
-                  //  }
+                   }
 
                     ?>
 

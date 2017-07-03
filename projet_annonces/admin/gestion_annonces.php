@@ -19,7 +19,6 @@
     $ext = pathinfo($_POST['photo'], PATHINFO_EXTENSION);
     if($ext != 'jpg')  $message.= 'Veuillez vérifier le format ';
     debug($_POST);
-  }
 
   if(empty($message)) { // si message est vide, c'est qu'il n'y a pas d'erreurs
     $pdo = new PDO('mysql:host=localhost;dbname=annonceo', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
@@ -40,6 +39,7 @@
     $resultat->execute();
       echo "Félicitations, l'annonce a bien été enregistrée !";
   }
+}
 
   // 2- Liens affichage et ajout de produits
   $contenu .= '<ul class="nav nav-tabs">

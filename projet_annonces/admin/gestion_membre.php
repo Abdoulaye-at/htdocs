@@ -66,18 +66,30 @@ if(isset($_GET['action']) && $_GET['action'] == "modifier"){
     debug($membre_actuel);
 
 
-      if($_POST)
-      {
-        executeRequete('UPDATE membre SET pseudo = :pseudo, mdp = :mdp, nom = :nom, prenom = :prenom, telephone = :telephone, email = :email, civilite = :civilite, date_enregistrement = NOW())',
-      array(
-            ':id_membre' => $_POST['id_membre'],
-            ':pseudo'=>$_POST['pseudo'],
-            ':mdp'=>$_POST['mdp'],
-            ':nom'=>$_POST['nom'],
-            ':prenom'=>$_POST['prenom'],
-            ':telephone'=>$_POST['telephone'],
-            ':email'=>$_POST['email'],
-            ':civilite'=>$_POST['civilite']));
+      if($_POST){
+				//echo 'test';
+      //   executeRequete('UPDATE membre SET pseudo = :pseudo, mdp = :mdp, nom = :nom, prenom = :prenom, telephone = :telephone, email = :email, civilite = :civilite',
+      // array(
+			//
+      //       ':pseudo'=>$_POST['pseudo'],
+      //       ':mdp'=>$_POST['mdp'],
+      //       ':nom'=>$_POST['nom'],
+      //       ':prenom'=>$_POST['prenom'],
+      //       ':telephone'=>$_POST['telephone'],
+      //       ':email'=>$_POST['email'],
+      //       ':civilite'=>$_POST['civilite']));
+
+			$resultat = $pdo->query('UPDATE membre SET pseudo = :pseudo, mdp = :mdp, nom = :nom, prenom = :prenom, telephone = :telephone, email = :email, civilite = :civilite');
+			$resultat->bindValue(':pseudo', $_POST['pseudo'], PDO::PARAM_STR);
+			$resultat->bindValue(':mdp', $_POST['mdp'], PDO::PARAM_STR);
+			$resultat->bindValue(':nom', $_POST['nom'], PDO::PARAM_STR);
+			$resultat->bindValue(':prenom', $_POST['prenom'], PDO::PARAM_STR);
+			$resultat->bindValue(':telephone', $_POST['telephone'], PDO::PARAM_INT);
+			$resultat->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
+			$resultat->bindValue(':civilite', $_POST['civilite'], PDO::PARAM_STR);
+
+			$resultat->execute();
+
       $contenu .= '<div class="bg-succes">Le produit a bien été modifié.</div>';
     }
   }

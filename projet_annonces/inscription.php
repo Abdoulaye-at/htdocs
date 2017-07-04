@@ -26,7 +26,7 @@ if(!empty($_POST)){
   if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
     $contenu .= '<div class="bg-danger">L\'email n\'est pas valide !</div>';
   }
-  if(!isset($_POST['civilite']) || ($_POST['civilite'] =! 'm' && $_POST['civilite'] =! 'f')){
+  if(!isset($_POST['civilite']) || ($_POST['civilite'] =! 'homme' && $_POST['civilite'] =! 'femme')){
     $contenu .= '<div class="bg-danger">Erreur de civilité !</div>';
   }
 
@@ -38,15 +38,16 @@ if(!empty($_POST)){
       $contenu .= '<div class="bg-danger">Pseudo indisponible, veuilez en choisir un autre</div>';
     } else {
       $_POST['mdp'] = md5($_POST['mdp']); // on encrypte le mot de passe avec la fonction prédéfinie md5
-      executeRequete('INSERT INTO membre (pseudo, mdp, nom, prenom, telephone, email, civilite, statut, date_enregistrement) VALUES (:pseudo, :mdp, :nom, :prenom, :telephone, :email, :civilite, 0, NOW())',
-      array(':pseudo'=>$_POST['pseudo'],
-            ':mdp'=>$_POST['mdp'],
-            ':nom'=>$_POST['nom'],
-            ':prenom'=>$_POST['prenom'],
-            ':telephone'=>$_POST['telephone'],
-            ':email'=>$_POST['email'],
-            ':civilite'=>$_POST['civilite'],));
+      $resultat = executeRequete('INSERT INTO membre (pseudo, mdp, nom, prenom, telephone, email, civilite, date_enregistrement) VALUES (:pseudo, :mdp, :nom, :prenom, :telephone, :email, :civilite, NOW())',
+      array(':pseudo'=> $_POST['pseudo'],
+            ':mdp'=> $_POST['mdp'],
+            ':nom'=> $_POST['nom'],
+            ':prenom'=> $_POST['prenom'],
+            ':telephone'=> $_POST['telephone'],
+            ':email'=> $_POST['email'],
+            ':civilite'=> $_POST['civilite']));
       $contenu .= '<div class="bg-succes">Vous êtes inscrit sur notre site.<a href="connexion.php">Cliquez ici pour vous connecter</a></div>';
+
       $inscription = true; // pour ne plus afficher le formulaire
     }
   }
@@ -79,8 +80,12 @@ if(!$inscription) :
     <input type="text" name="email" id="email" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>"><br><br>
 
     <label for="civilite">Civilité</label><br>
-    <input type="radio" name="civilite" id="homme" value="m"checked><label for="homme">Homme</label>
-    <input type="radio" name="civilite" id="femme" value="f" <?php if(isset($_POST['civilite']) && $_POST['civilite'] == 'f') echo 'checked'; ?>><label for="femme"> Femme</label><br><br>
+    <select id="civilite" name="civilite">
+      <option value="homme">Homme</option>
+      <option value="femme">Femme</option>
+    </select><br><br>
+    <!-- <input type="radio" name="civilite" id="civilite" value="homme" checked><label for="homme">Homme</label>
+    <input type="radio" name="civilite" id="civilite" value="femme"><label for="femme"> Femme</label><br><br> -->
 
     <input type="submit" name="inscription" value="S'inscrire" class="btn">
   </form>

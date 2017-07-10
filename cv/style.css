@@ -9,3 +9,12 @@ span{
 div{
   display: block;
 }
+
+#dev {
+  text-align: center;
+  border: 1px solid black;
+}
+
+ul{
+  list-style-type: none;
+}

@@ -1,9 +1,23 @@
 .container{
+  background: url('wp.jpg');
   background-color: lightgrey;
+  font-family: 'Zilla Slab', serif;
+  width: 1000px;
+  color: #013742;
 }
 
+h1, h2, h3{
+  color: black;
+}
+
+.aside, .exp{
+  height: 600px;
+}
 span{
   display: block;
+  font-weight: bold;
+  color: #2B2B2A;
+
 }
 
 div{
@@ -17,4 +31,7 @@ div{
 
 ul{
   list-style-type: none;
+}
+p, li {
+  font-size: 20px;
 }

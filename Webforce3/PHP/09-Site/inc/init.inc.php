@@ -15,7 +15,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=site', 'root', '', array(PDO::ATTR_E
 session_start();
 
 // Définition du chemin du site
-define('RACINE_SITE', '/PHP/09-Site/'); // indique le dossier dans lequel se trouve les sources du site
+define('RACINE_SITE', 'Webforce3/PHP/09-Site/'); // indique le dossier dans lequel se trouve les sources du site
 
 // Variables d'affichage de contenu :
 $contenu = '';
@@ -23,4 +23,4 @@ $contenu_gauche = '';
 $contenu_droite = '';
 
 // inclusion des fonctions
-require_once('fonction.inc.php'); 
+require_once('fonction.inc.php');

@@ -3,7 +3,7 @@
   background-color: lightgrey;
   font-family: 'Zilla Slab', serif;
   width: 1000px;
-  color: #013742;
+  color: #013852;
 }
 
 h1, h2, h3{
@@ -13,6 +13,14 @@ h1, h2, h3{
 .aside, .exp{
   height: 600px;
 }
+
+.titre{
+  border: 1px solid black;
+  border-top: none;
+  border-right: none;
+  padding-left: 5px;
+}
+
 span{
   display: block;
   font-weight: bold;

@@ -1,0 +1,394 @@
+----------------------------------------------------
+SILEX :
+----------------------------------------------------
+
+INTRO : Qu'est-ce que Silex ?
+  Etape 0   : BASE DE NOTRE APP : site_mvc (procédural)
+  Étape 1   : INSTALLATION DE SILEX
+  Étape 2   : DEMARRAGE ET COMPREHENSION
+  Étape 3   : LE ROUTING SUR SILEX
+  Étape 4   : VIRTUAL HOST
+  Étape 5   : HTACCESS : retirer 'index.php'
+  Étapr 6   : DEMARRAGE DE L'APPLICATION
+  Étape 7   : UTILISATION DES SERVICES SILEX (Doctrine DBAL)
+  Étape 8   : UTILISATION DES SERVICES SILEX (Twig)
+  Étape 9   : UTILISATION DES SERVICES SILEX (Bootstrap)
+  Étape 10  : AJOUTER DES COMMENTAIRES AU PRODUIT (injections de dépendances)
+  Étape 11  : CRÉER LA CLASS DAO (model)
+  Étape 12  : HERITAGE TWIG
+  Étape 13  : GESTION DE LA SECURITE (connexion)
+  Étape 14  : CLASS MEMBREDAO ET USERPROVIDERINTERFACE
+  Étape 15  : FORMULAIRE DE CONNEXION
+  Étape 16  : AJOUTER UN COMMENTAIRE  (gestion des formulaires via SILEX)
+  Étape 17  : FORMULAIRE D'INSCRIPTION
+  Étape 18  : BACKOFFICE
+  Étape 19  : PRÉPARATION POUR LA PRODUCTION
+  Étape 20  : RÉ-ORGANISATION DES CONTROLLERS
+
+  //-------------------------------//
+ // INTRO : Qu'est-ce que Silex ? //
+//-------------------------------//
+
+1/ Avantages à utiliser un framework du marché ?
+
+  A)  Choix d'une organisation optimisée. Il est difficile de conceptualiser soi-même un framework : Où vont les controllers? les vues? les models?
+      Aucune réponse n'est parfaite mais chacun a sa propre organisation cohérente.
+
+  B)  Fonctionnalités communes (connexion, inscription, session, etc...). Un framework permet de récupérer des briques déja existantes.
+
+  C) Services disponibles : Tous les framework proposent des services comme : le routage (rooting), la sécurité, la gestion du cache etc...
+                            Cela nous permet donc de consacrer plus de temps au devp de nos propres fonctionnalités.
+
+2/ Quel choix de framework ?
+
+  A) Son propre framework ?
+    Très formateur. On peut l'améliorer, et l'utiliser dans nos projets perso... par exemple. Par contre, pas de communauté, pas de documentation, et c'est difficile de garantir la sécurité.
+
+  B) Framework du marché : Fullstack et mini-framework
+    - Fullstack (symphony / zend / cake) : Beaucoup de services, grosses communauté, mais un déploiement très lourd et une architecture IMPOSÉE.
+    - Mini-framework (Laravel / Silex) : proposent des services "à la carte", et une architecture SOUPLE.
+
+3/ Et Silex dans tout cela ?
+
+  A) Silex est un framework développé par les équipes de symphony (sensiolabs). Il repose sur les mêmes composants.
+
+  B) On dit que Silex est un mini-framework parfait pour la compréhension, pour développer rapidement des applications, et première étape intéressante pour celui qui veut par la suite maîtriser Symphony.
+
+  C) Documentation https://silex.sensiolabs.org/doc/2.0
+
+
+------------------------------------------------------
+Etape 0   : BASE DE NOTRE APP : site_mvc (procédural)
+------------------------------------------------------
+Pour commencer la compréhension de silex, nous allons partir sur la base d'un site en procédural mvc afin d'avancer étapes par étapes.
+silex/site_mvc
+  css/
+  photo/
+  fonts/
+  index.php
+  model.php
+  view.php(boutique.php)
+
+----------------------------------
+Etape 1   : INSTALLATION DE SILEX
+----------------------------------
+
+Sommaire :
+1/ Installation de composer
+2/ Création du dossier BOUTIQUE
+3/ Commande pour télécharger les composants de silex
+3bis/ Autres commandes pour télécharger les composants de silex
+4/ Les composants de silex (symphony)
+
+----------------------------
+
+1/ Installation de composer
+Composer est un outil de gestion de dépendance, il permet d'installer des services (composants/dépendances) et est relié à un fichier 'composer.json'
+  - Télécharger composer
+  - Installer composer (préciser php.exe)
+
+2/ Création d'un dossier BOUTIQUE (nom de notre application)
+silex/BOUTIQUE/
+
+3/ Commande pour télécharger les composants de silex
+  - On se place dans le dossier BOUTIQUE, on fait MAJ + clic Droit, et on fait ouvrir une fenêtre de commade ici
+  <cmd> composer require silex/silex "~2.0" </cmd>
+
+3bis/ Autre manière de procéder pour récupérer les composants :
+  BOUTIQUE/
+    composer.json
+
+  <code>
+    "require":{
+      "silex/silex": "~2.0"
+    }
+  </code>
+
+  MAJ + clic Droit puis "Ouvrir une fênetre de commande ici"
+  <cmd> composer install </cmd>
+
+4/ Composants :
+  Le dossier vendor, contient le coeur de notre application : C'est à dire tous les composants se silex/symphony, sur lesquels nous n'interviendront pas.
+
+--------------------------------------
+Etape 2  : DEMARRAGE ET COMPREHENSION
+--------------------------------------
+
+1/ Création de répertoire web/
+2/ Création du fichier index.php dans le dossier web/
+  - Require l'autoload : il nous permet de require tous les fichiers dont nous aurons besoin pour l'éxécution du script (tres pratique).
+  - Instanciation de la classe Application : cela nous permet d'accéder aux fonctionnalités de Silex.
+  - Création de la route avec $app -> get(); : silex nous permet de définier des routes qui sont des points d'entrée dans notre application. Chaque route est associée à une fonctionnalité (une route ~/= un controller)
+  - $app -> run(); ; lancement de l'application
+
+--------------------------------------
+Etape 3  : DEMARRAGE ET COMPREHENSION
+--------------------------------------
+
+Sommaire :
+1/ Création d'une nouvelle route
+2/ La fonction get de notre objet APPLICATION
+3/ Arguments
+4/ fonction escape()
+------------------------------------------
+
+1/ Création d'une nouvelle route :
+  <code> /hello/{name}
+
+Test : http://localhost/silex/BOUTIQUE/web/index.php/hello/abdoulaye
+
+2/ La fonction get de notre objet Application, permet de déclarer une nouvelle route. Pour chaque route, on déclarera ensuite des traitements. Comme on le ferai dans un controller.
+
+3/ Le premier argument de la fonction get() est le nom de la route. L'info entre accolades {} permet de déclarer un ou plusieurs paramètres dans l'URL.
+   Le second argument, fonction() est ce que l'on appelle une closure. Elle peut recevoir, si besoin, les paramètres dynamiques de notre URL.
+
+4/ La méthode escape() permet simplement d'afficher le paramètre contenu dans la route. Escape() permet égakement d'éviter les injections de code dans l'URL.
+
+---------------------------
+  Etape 3  : VIRTUAL HOST
+---------------------------
+
+Sommaire :
+1/ Modification du fichier vhost (apache)
+2/ Modification du fichier conf (apache)
+3/ Modification du fichier Host (system32)
+--------------------------------------------
+
+1/ Modification du fichier vhost :
+  > c:\xampp\apache\conf\extrra\httpd-vhosts.conf
+
+  <code>
+    ## Virtual host pour le projet BOUTIQUE (silex)
+
+    <VirtualHost *:80>
+      DocumentRoot "C:\xampp\htdocs"
+      ServerName localhost
+    </VirtualHost>
+
+
+    <VirtualHost *:80>
+      DocumentRoot "C:\xampp\htdocs\silex\BOUTIQUE\web"
+      ServerName BOUTIQUE
+      ServerAlias www.boutique.dev
+      <Directory "C:\xampp\htdocs\silex\BOUTIQUE\web">
+        AllowOverride all
+      </Directory>
+    </VirtualHost>
+  </code>
+
+2/ Modification du fichier conf :
+   > c:\xampp\apache\conf\httpd.conf
+
+   On vérifie que cette ligne est bien décommentée :
+   # Virtual Host
+   include conf\extra\httpd.conf
+
+3/ Modification du fichier Hosts dans system32
+  c:\windows\system32\drivers\etc\hosts
+
+  <code>
+    127.0.0.1 localhost
+    127.0.0.1 www.boutique.dev
+  </code>
+
+======> REDEMARRER LES SERVICES DE XAMPP
+test : www.boutique.dev
+
+----------------------------------------------
+  Etape 5  : HTACCESS POUR RETIRER INDEX.PHP
+----------------------------------------------
+
+web/
+  test.txt
+
+<code>
+  <IfModule mod_rewrite.c>
+    Options -MultiViews
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+  </IfModule>
+
+test : www.boutique.dev/hello/abdoulaye
+
+----------------------------------------------
+  Etape 6  : DEMARRAGE DE L'APPLICATION
+----------------------------------------------
+Sommaire :
+1/ Création des dossiers
+2/ Récupérer les fichiers (de notre base site_mvc)
+3/ Création du fichier de routes
+4/ Ré-écriture de index.php
+-------------------------------------------------
+
+1/ Création des dossiers :
+  BOUTIQUE/
+    web/
+      vendor
+      app/    (config de l'application)
+      db/     (script de creation de la bdd)
+      src/    (fichiers sources de notre application)
+      views/  (vues de notre application)
+
+2/ Récupérer les fichiers (de notre base site_mvc)
+Dans un premier temps, on va gérer l'affichage de nos produits (boutique.php)
+  -> model.php à copier/coller dans src
+  -> view.php à copier/coller dans views
+  -> css/ photo/ fonts/ à copier/coller dans web
+
+3/ Création du fichier de routes :
+  - app/
+    -> création du fichier routes.php
+    La création de la route '/' (signifiant la home de notre site) va récupérer les infos de notre function afficheAll() et va les afficher dans notre vue (view.php)
+
+4/ Ré-écriture de index.php
+    - A ce stade, nous n'avons plus besoin des deux routes crées en exemple, simplement besoin de require 'routes.php'
+    - on passe au mode debug
+
+-> A partir de maintenant, index.php centralise les requêtes HTTP, il est le controller dit 'frontal'     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

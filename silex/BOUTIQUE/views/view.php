@@ -63,13 +63,13 @@
       <?php foreach ($produits as $produit) : ?>
         <div class="col-sm-4">
           <div class="thumbnails">
-            <a href=""><img src="photo/<?= $produit['photo'] ?>" width="130" height="100" alt=""></a>
+            <a href=""><img src="photo/<?= $produit -> getPhoto() ?>" width="130" height="100" alt=""></a>
 
 
           <div class="caption">
-            <h4 class="pull-right"> <?php echo $produit['prix'] ?> €</h4>
-            <h4><?= $produit['titre'] ?></h4>
-            <p><?= $produit['description'] ?></p>
+            <h4 class="pull-right"> <?php echo $produit -> getPrix() ?> €</h4>
+            <h4><?= $produit -> getTitre() ?></h4>
+            <p><?= $produit -> getDescription() ?></p>
           </div>
         </div>
       </div>

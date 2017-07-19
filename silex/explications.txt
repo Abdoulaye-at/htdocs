@@ -246,114 +246,111 @@ Dans un premier temps, on va gérer l'affichage de nos produits (boutique.php)
     - A ce stade, nous n'avons plus besoin des deux routes crées en exemple, simplement besoin de require 'routes.php'
     - on passe au mode debug
 
--> A partir de maintenant, index.php centralise les requêtes HTTP, il est le controller dit 'frontal'     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-> A partir de maintenant, index.php centralise les requêtes HTTP, il est le controller dit 'frontal'.
+
+- A ce stade, nous devrions pouvoir afficher la page boutique sur la home de notre site Silex
+- Test à effectuer : www.boutique.dev
+- En revanche, nous sommes en procédural... il va donc falloir ajouter un couche d'objet
+
+
+-------------------------------------------------------------
+  Étape 7  : UTILISATION DES SERVICES SILEX :
+             Doctrine DBAL + modélisation objet
+-------------------------------------------------------------
+
+Sommaire :
+1/ Création de la classe Produit
+2/ Remplacement de PDO par Doctrine DBAL
+3/ Créer le dossier DAO(Data Access Object)
+4/ Ajouter le fichier ProduitDAO.php
+5/ Mise à jour de l'application via composer
+6/ Création du fichier app.php
+7/ Création du fichier prod.php dans app/config
+8/ Création du fichier dev.php app/config
+9/ Modification des routes
+10/ Modification de la vue
+11/ Modification de l'index.php
+---------------------------------------------
+
+1/ Création de la classe Produit dans src/Entity/Produit.php
+  -> namespace BOUTIQUE\Entity
+
+  Cette classe est le plan de fabrication d'un objet Produit. Il contient toutes les proprriétés de l'entité produit (private) et tous les getters/setters. On dit que cette classe est un POPO (Plain Old PHP Object).
+
+
+2/ Remplacement de PDO par Doctrine DBAL
+  -> Doctrine DBAL (DataBase Abstract Layer)  : Fait la même chose que PDO mais améliore le système de requêtes, permet également que nos requêtes soient compatibles avec tous SGBD.
+    Nous récupère également la connexion à la BDD (équivalent de notre PDO Manager).
+
+3/ Création d'un dossier DAO/ dans src/
+  -> DAO : DAO est un design pattern. Il nous permet de récupérer les informations dans la BDD non pas sous forme d'array mais sous forme d'OBJET, cela nécessite une mécanique particulière (voir méthode BuildProduit()).
+  -> C'est l'équivalent du dossier Model que nous avons crée dans notre mini-framework (site_oo)
+
+4/ Création du fichier ProduitDAO.php dans src/DAO
+  - La première étape de notre fichier est de récupérer une connxeion à la BDD (Doctrine DBAL)
+  - On stocke cette connexion à la BDD dans 'private $db', et on y accède grâce à getDb();
+  - Chaque requête est représentée
+
+  => DAO est un design pattern qui permet de modéliser sous forme d'objet (entity) les résultats d'une requête.
+
+5/ Mise à jour de notre application
+    - Modification du fichier composer.json
+
+    <code>
+      {
+        "require" : {
+          "silex/silex": "~2.0",
+          "doctrine/dbal": "2.5"
+        },
+        "autoload": {
+          "psr-4" : {"BOUTIQUE\\": "src"}
+        }
+      }
+
+      - ensuite on utilise composer pour mettre à jour l'application :
+      <cmd> composer update
+
+      => Cette commande fait deux choses:
+        1- cela permet de récupérer Doctrine DBAL
+        2- met à jour l'autoload
+
+      Plus d'infos sur Doctrine DBAL sur :
+      http://docs.doctrine.project.org/projects/doctrine-dbal/en/latest
+
+6/ Création du fichier app.php dans le dossier app/
+  - Ce fichier représente les paramètres de notre application
+    -> Les deux premières lignes (use ErrorHandler et ExceptionHandler) cela permet à notre application de gérer les erreurs php et notamment grâce aux composants de symphony on va gérer sous forme d'exception
+
+    -> on enregistre le fournisseur de services associé à Doctrine DBAL. A faire pour tous les services utilisés !
+
+    -> on enregistre dans notre application la classe ProduitDAO dans $add['dao.produit']. Ce qui nous permettra de récupérer facilement une instance de notre classe ProduitDAO. $app['db'] représente notre connexion à la BDD.
+
+7/ Création du fichier prod.php dans app/config/
+  -> Ce fichier contient les infos de connexion à la BDD
+
+8/ Création du fichier dev.php dans app/config/
+  -> Ce fichier contient les infos relatives à la phase de dev.
+
+9/ Modification du fichier routes.php
+  -> On remplace l'ancien require de model.php qui nous permettait d'accéder à la méthode afficheAll(), par une instanciation de la classe ProduitDAO qui est notre nouveau Model (accès aux infos dans la BDD)
+    Dans ce nouveau modèle, on execute findAll() qui nous retourne tous les produits, et findAllCategorie() qui nous retourne toutes les catégories.
+    ==> Mais la logique de controller reste la même : Objectif 1 : récupérer les infos.
+
+    /!\ Important : Maintenant nous travaillons avec des arrays composés d'objet, donc dans notre vue, $produit['titre'] ne fonctionnera plus... il faut faire $produit -> getTitre().
+
+10/ Modification de la vue (views/view.php)
+  -> On remplace tous le arrays par l'utilisation des getter.
+    Array : <?= $produit['prix'] ?>
+    Objet : <?= $produit -> getPrix() ?>
+    Twig : {{ produit.prix }}
+
+11/ Modification du fichier index.php dans le dossier web
+  <code> Avant le require de routes.php
+    require dev.php
+    require app.php
+
+  ==> A ce stade, notre home doit afficher tous les produits et le menu des catégories, cette étape nous a permis d'introduire une modélisation en objet
+  ==> Nous avons beaucoup travaillé les parties MODEL (DAO) et controller (routes.php), dans l'étape suivante, nous travaillerons surout la partie view
 
 
 

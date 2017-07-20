@@ -4,13 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit883352972ce8cdbce68ed2b40ba890fc
+class ComposerStaticInit9968c633f1ffeb86bf8102e4384ca38a
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -38,6 +42,10 @@ class ComposerStaticInit883352972ce8cdbce68ed2b40ba890fc
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -89,6 +97,13 @@ class ComposerStaticInit883352972ce8cdbce68ed2b40ba890fc
     );
 
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'P' => 
         array (
             'Pimple' => 
@@ -124,9 +139,9 @@ class ComposerStaticInit883352972ce8cdbce68ed2b40ba890fc
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit883352972ce8cdbce68ed2b40ba890fc::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit883352972ce8cdbce68ed2b40ba890fc::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit883352972ce8cdbce68ed2b40ba890fc::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9968c633f1ffeb86bf8102e4384ca38a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9968c633f1ffeb86bf8102e4384ca38a::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit9968c633f1ffeb86bf8102e4384ca38a::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

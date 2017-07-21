@@ -431,8 +431,17 @@ Sommaire :
 ==> A ce stade, notre home doit s'afficher. Test : www.boutique.dev
 ==> En savoir plus sur Twig : https://twig.symfony.com/
 
+------------------------------
+	ETAPE 12 : Héritage Twig :
+------------------------------
+Sommaire :
 
+1/ Créer le fichier layout.html.twig dans views/
+2/ Modifier notre vue
 
+--------------
+1/ layout.html.twig
+	-> on met à l'intérieur toute la structure d'une page ( excepté le container)
 
 
 

@@ -21,3 +21,8 @@ $app -> register(new Silex\Provider\AssetServiceProvider(), array('assets.versio
 $app['dao.produit'] = function($app){
 	return new BOUTIQUE\DAO\ProduitDAO($app['db']);
 };
+
+// on enregistre dans $app['dao.membre'] notre objet de la classe MembreDAO. De cette manière quand on en aura besoin, on utilisera $app['dao.membre']
+$app['dao.membre'] = function($app){
+	return new BOUTIQUE\DAO\MembreDAO($app['db']);
+};

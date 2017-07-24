@@ -444,6 +444,162 @@ Sommaire :
 	-> on met à l'intérieur toute la structure d'une page ( excepté le container)
 
 
+------------------------------------------------
+ AJOUTS DE COMMENTAIRES AUX PRODUITS :
+------------------------------------------------
+
+Sommaire :
+1/ Ajouter la table commentaires dans la bdd
+2/ Créer la classe Entity/Commentaires
+3/ Créer la classe CommentaireDAO
+----------------------------------------------------
+
+1/ Ajouter la table commentaires dans la bdd
+	-> id_commentaire (PK) AI INT 11
+	-> auteur Varchar (100)
+	-> contenu (TEXT)
+	-> id_produit (FK) INT 11
+	-> date_enregistrement (DATETIME)
+
+2/ Créer la classe Commentaire 'Commentaire.php' dans src/Entity
+		-> mettre toutes les propriétés et les getters/setters
+		-> ATTENTION : On ne va pas mettre de propriété id_produit (ni setters/getters) mais on va mettre un objet de la classe Produit. De cette manière un commentaire est forcément lié à un produit. Il ne peut y avoir de commentaire sans produit. Ils sont dépendants.
+
+3/ Créer la classe CommentaireDAO
+ - Cette classe est la partie Model de notre entité commentaire
+ - Pour chaque commentaire qu'on récupère de la BDD, on devra récupérer un objet Produit. Cette classe doit donc intéragir avec ProduitDAO (instance sans héritage)
+
+---> Il y a du code commun entre tous les DAO... on va donc factoriser un peu notre code dans le chapitre suivant
+
+-----------------------------------------------------------
+	Créer la classe DAO de laquelle nos DAO seront hérités :
+-----------------------------------------------------------
+Sommaire :
+1/ Création de la classe DAO
+2/ DAO : Une classe abstract
+3/ Modification de ProduitSAO, MembreDAO et CommentaireDAO
+
+1/ Création de la classe DAO
+	-> private $db
+	-> construct()
+	-> getDb()
+	-> BuildEntityObject()
+
+2/ DAO : Une classe Abstract
+	En déclarant la classe DAO abstract et la méthode buildEntityObject() abstract on oblige tous les DAO à redéclarer cette méthode qui est spécifique à chacun...
+
+3/ Modification de ProduitDAO, MembreDAO et CommentaireDAO
+	-> extends DAO
+	-> suppression de $db, getDb(), et construct()
+	-> Remplacement de BuildProduit(), BuildMembre(), et buildCommentaire() par BuildEntityObject() à la fin de chaque fichier et également dazns toutes les méthodes qui utilisent cette fonction
+
+-------------------------------------------
+	Gestion de la sécurité et class membre
+-------------------------------------------
+Sommaire :
+1/ INTRO
+2/ Modification de la BDD
+3/ Mise à jour de notre application (services de sécurité)
+4/ Modification du fichier membre
+-----------------------------------------
+
+1/ INTRO : L'un des objectifs (avantages) de l'utilisation d'un framework est de pouvoir utiliser les services, et notamment déléguer la partie sécurité. Symfony/Silex permet de faire deux choses :
+Authentification et accès aux sources.
+
+--> Chaque URL peut disposer d'un "pare-feu". Pour faire fonctionner ce système, il faut que chaque utilisateur ai un role.
+
+2/ Modification de la BDD
+
+	-> pseudo ---> username
+	-> mdp ------> password
+	-> ajouter les deux champs suivants :
+		- salt
+		- role (ROLE_USER ou ROLE_ADMIN)
+	-> membre (password john)
+			password :
+			salt
+
+3/ Mise à jour de notre application :
+	/composer.json
+
+	<code>
+		"symfony/security": "~2.8 | 3.0.*"
+
+	<cmd>
+			composer update
+
+4/ Modifier Membre.php
+	-> pseudo : username (propriété, getter, setter)
+	-> mdp : password (propriété, getter, setter)
+
+	-> Ajout de salt (propriété, getter, setter)
+	-> Ajout de role (propriété, getter, setter)
+
+	-> use UserInterface
+	-> implements UserInterface
+	-> ajout de getRoles()
+	-> ajout de eraseCredentials()
+
+==> Toutes ces modifs sont obligatoires si on veut pouvoir utiliser la connexion sécurisée via les composants de symfony.
+		Les dev qui ont crée le coeur de l'application, et notamment les composants de sécurité attendent de nous ces propriétés et fonctions afin que leurs fonctionnalités puissent prendre la main sur notre application.
+		
+---------------------------------------------
+	Class MembreDAO et userProviderInterface
+---------------------------------------------
+Sommaire :
+1/ Modification de MembreDAO
+2/ Enregistrement des nouveaux services dans app.php
+
+1/ Modification de MembreDAO
+    -> User les composants
+    -> implements UserProviderInterface
+    -> obligation d'ajouter 3 méthodes :
+        -> loadUserByUsername
+        -> supportClass();
+        -> refreshUser();
+
+---------------------------------------------
+	Formulaire de connexion
+---------------------------------------------
+Sommaire :
+1/ Route login dans routes.php
+2/ Création de la vue login
+3/ app.php : register aux services de sécurité
+4/ routes.php use Symfony\Component\HTTPFoundation\Request;
+5/ Layout.html.twig
+    -> Connexion : Si on est connecté
+    -> Profil/deconnexion : Si on est connecté
+
+1/ Route login routes.php
+    -> on complète l'array $params pour envoyer des éléments à notre vue (error et lastUserName)
+
+2/ Vue Login.html.twig :
+    ->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

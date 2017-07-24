@@ -36,7 +36,6 @@ class ProduitDAO
 		return $produits;
 	}
 
-
 	// Fonction pour récupérer tous les produits en fonction d'une categorie
 	public function findAllByCategorie($categorie){
 		$requete = "SELECT * FROM produit WHERE categorie = ? ";
@@ -50,7 +49,6 @@ class ProduitDAO
 		return $produits;
 	}
 
-
 	// Fonction pour récupérer toutes les catégories :
 	public function findAllCategorie(){
 		// On récupere sous forme d'array...
@@ -59,7 +57,6 @@ class ProduitDAO
 		$resultat = $this -> getDb() -> fetchAll($requete);
 		return $resultat;
 	}
-
 
 	// Fonction pour récupérer un produit par son ID :
 	public function find($id){
@@ -72,9 +69,7 @@ class ProduitDAO
 	}
 
 	//Suggestions
-
 	public function findSuggestions($id){
-
 		$produit = $this -> find($id); // Me retourne toutes les infos du produit en cours d'affichage
 
 		$categorie = $produit -> getCategorie();
@@ -109,18 +104,4 @@ class ProduitDAO
 
 		return $produit;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

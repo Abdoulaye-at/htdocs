@@ -1,44 +1,44 @@
 <?php
 namespace BOUTIQUE\Entity;
 
-class Produit
-{
+class Produit {
+
 	private $id_produit;
 	private $reference;
 	private $categorie;
-	private $titre; 
+	private $titre;
 	private $description;
 	private $couleur;
 	private $taille;
-	private $public; 
+	private $public;
 	private $photo;
 	private $prix;
 	private $stock;
-	
+
 	public function getId_produit(){
 		return $this -> id_produit;
-	}	
+	}
 	public function setId_produit($id){
 		$this -> id_produit = $id;
 	}
-	
-	
+
+
 	public function getReference(){
 		return $this -> reference;
 	}
 	public function setReference($ref){
 		$this -> reference = $ref;
 	}
-	
-	
+
+
 	public function getCategorie(){
 		return $this -> categorie;
 	}
 	public function setCategorie($cat){
 		$this -> categorie = $cat;
 	}
-	
-	
+
+
 	public function getTitre(){
 		return $this -> titre;
 	}
@@ -46,7 +46,7 @@ class Produit
 		$this -> titre = $titre;
 	}
 
-	
+
 	public function getDescription(){
 		return $this -> description;
 	}
@@ -54,7 +54,7 @@ class Produit
 		$this -> description = $desc;
 	}
 
-	
+
 	public function getCouleur(){
 		return $this -> couleur;
 	}
@@ -62,14 +62,14 @@ class Produit
 		$this -> couleur = $couleur;
 	}
 
-	
+
 	public function getTaille(){
 		return $this -> taille;
 	}
 	public function setTaille($taille){
 		$this -> taille = $taille;
 	}
-	
+
 
 	public function getPublic(){
 		return $this -> public;
@@ -78,14 +78,14 @@ class Produit
 		$this -> public = $public;
 	}
 
-	
+
 	public function getPhoto(){
 		return $this -> photo;
 	}
 	public function setPhoto($photo){
 		$this -> photo = $photo;
 	}
-	
+
 
 	public function getPrix(){
 		return $this -> prix;
@@ -93,7 +93,7 @@ class Produit
 	public function setPrix($prix){
 		$this -> prix = $prix;
 	}
-	
+
 
 	public function getStock(){
 		return $this -> stock;
@@ -101,5 +101,5 @@ class Produit
 	public function setStock($stock){
 		$this -> stock = $stock;
 	}
-	
+
 }

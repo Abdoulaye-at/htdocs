@@ -67,4 +67,19 @@
 		</div>
 	</div>
 
+	<!-- Commentaires sur le produit -->
+	<div class="row">
+		<div class="col-lg-12">
+			<h3>Commentaires sur le produit</h3>
+			{% if commentaires %}
+				{% for commentaire in commentaires %}
+					<b>Par : {{commentaire.auteur}} le {{commentaire.date_enregistrement}}</b><br>
+					<span><i>{{commentaire.contenu}}</i></span><br><br>
+				{% endfor %}
+			{% else %}
+				<p>Aucun commentaire sur ce produit pour le moment !</p>
+			{% endif %}
+		</div>
+	</div>
+
 {% endblock %}

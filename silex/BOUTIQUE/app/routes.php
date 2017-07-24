@@ -1,5 +1,6 @@
 <?php
 
+use Symfony\Component\HTTPFoundation\Request;
 
 //Code ajouté à l'etape 6.3
 // Supprimer en 7.9
@@ -70,11 +71,13 @@ $app -> get('/produit/{id}', function($id) use($app){
 	// récupérer les infos d'un produit grâce à son id.
 	$produit = $app['dao.produit'] -> find($id);
 	$suggestions = $app['dao.produit'] -> findSuggestions($id);
+	$commentaires = $app['dao.commentaire'] -> findAllByProduit($id);
 
 	$params = array(
-		'produit' => $produit,
-		'title' => $produit -> getTitre(),
-		'suggestions' => $suggestions
+		'produit' 		 => $produit,
+		'title' 			 => $produit -> getTitre(),
+		'suggestions'	 => $suggestions,
+		'commentaires' => $commentaires
 	);
 	return $app['twig'] -> render('produit.html.twig',$params);
 
@@ -120,3 +123,4 @@ $app ->  get('/login/', function() use($app){
 // EXERCICE 4 : Gérer de A à Z l'affichage de la page connexion (attention juste l'affichage)
 //   1 - Récupérer le fichier login.html.twig qui contient le formulaire d'inscription (dans le drive)
 //   2 - Créer la route /login qui permet d'afficher la page de connexion
+

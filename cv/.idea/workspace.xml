@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4f083551-8d76-417b-944b-d03d143ef167" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="admin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/admin.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2414">
+              <caret line="142" column="20" lean-forward="false" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="20" />
+              <folding>
+                <marker date="1502868938381" expanded="true" signature="108:23148" ph="{% block content ...%}" />
+                <marker date="1502868938381" expanded="true" signature="3787:4077" ph="{% if experiences ...%}" />
+                <marker date="1502868938381" expanded="true" signature="15549:16708" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="15549:16730" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="15549:16758" ph="{% for loisir in loisirs ...%}" />
+                <marker date="1502868938381" expanded="true" signature="15549:16780" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="15549:16797" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="15549:16915" ph="{% if persos ...%}" />
+                <marker date="1502868938381" expanded="true" signature="15549:17102" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="15649:16668" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="15698:16618" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="15750:16565" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="15803:16052" ph="..." />
+                <marker date="1502868938381" expanded="false" signature="15909:15916" ph="×" />
+                <marker date="1502868938381" expanded="true" signature="16103:16209" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="16262:16534" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="17161:20088" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="17240:20076" ph="{% if comments ...%}" />
+                <marker date="1502868938381" expanded="true" signature="17297:19964" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="17361:19947" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="17387:17658" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="17414:17631" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="17678:19925" ph="{% for comment in comments ...%}" />
+                <marker date="1502868938381" expanded="true" signature="17729:19893" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="18031:19869" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="18373:18457" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="18621:19825" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="18678:19769" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="18740:19708" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="18805:19094" ph="..." />
+                <marker date="1502868938381" expanded="false" signature="18925:18932" ph="×" />
+                <marker date="1502868938381" expanded="true" signature="19157:19288" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="19353:19667" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="20144:23123" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="20156:22947" ph="{% if users ...%}" />
+                <marker date="1502868938381" expanded="true" signature="20210:22838" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="20274:22821" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="20300:20523" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="20327:20496" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="20543:22799" ph="{% for user in users ...%}" />
+                <marker date="1502868938381" expanded="true" signature="20588:22767" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="20670:20905" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="20698:20878" ph="{% if user.role == 'ROLE_ADMIN' ...%}" />
+                <marker date="1502868938381" expanded="true" signature="20932:22743" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="21262:21346" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="21504:22699" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="21561:22643" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="21623:22582" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="21688:21977" ph="..." />
+                <marker date="1502868938381" expanded="false" signature="21808:21815" ph="×" />
+                <marker date="1502868938381" expanded="true" signature="22040:22168" ph="..." />
+                <marker date="1502868938381" expanded="true" signature="22233:22541" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/AdminController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Experience.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Domain/Experience.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoisirController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/LoisirController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PortfolioController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/PortfolioController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersoController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/PersoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExperienceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/ExperienceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/ApiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExperienceDAO.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/DAO/ExperienceDAO.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <marker date="1502868936473" expanded="true" signature="302:361" ph="..." />
+                <marker date="1502868936473" expanded="true" signature="319:361" ph="select * fro... t_experience" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+              <folding>
+                <marker date="1502868935990" expanded="true" signature="205:241" ph=" Home page controller. ..." />
+                <marker date="1502868935990" expanded="true" signature="3707:3869" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/templates/index.html.twig" />
+        <option value="$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/templates/layout.html.twig" />
+        <option value="$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/app/config/dev.php" />
+        <option value="$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/index.html.twig" />
+        <option value="$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/admin.html.twig" />
+        <option value="$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/AdminController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cv" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_cv_abdoulaye" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_cv_abdoulaye" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="siteCV_silex" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_cv_abdoulaye" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="siteCV_silex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_cv_abdoulaye" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="siteCV_silex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_cv_abdoulaye" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="siteCV_silex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DAO" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_cv_abdoulaye" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="siteCV_silex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_cv_abdoulaye" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="siteCV_silex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_cv_abdoulaye" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="siteCV_silex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f083551-8d76-417b-944b-d03d143ef167" name="Default" comment="" />
+      <created>1500968204556</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1500968204556</updated>
+      <workItem from="1500968205795" duration="5150000" />
+      <workItem from="1502090166878" duration="2411000" />
+      <workItem from="1502176373378" duration="4667000" />
+      <workItem from="1502440984357" duration="4945000" />
+      <workItem from="1502699915304" duration="3517000" />
+      <workItem from="1506602619417" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="20697000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1453125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/AdminController.php</url>
+          <line>33</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/PortfolioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/PersoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="51" lean-forward="true" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/ExperienceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/DAO/ExperienceDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <marker date="1502868936473" expanded="true" signature="302:361" ph="..." />
+            <marker date="1502868936473" expanded="true" signature="319:361" ph="select * fro... t_experience" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="57" />
+          <folding>
+            <marker date="1502868935990" expanded="true" signature="205:241" ph=" Home page controller. ..." />
+            <marker date="1502868935990" expanded="true" signature="3707:3869" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/error.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/templates/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/src/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/templates/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/templates/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/src/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/templates/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/views/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/views/layout.html.twig" />
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/config/dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/config/prod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/bin/console">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/src/controllers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/src/console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/src/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/templates/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/templates/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/web/index_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/path/to/install/web/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/web/css/microcms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/error.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/microcms.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/app/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-737">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/app/config/dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/app/config/prod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Domain/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Domain/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Domain/Experience.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/LoisirController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/PortfolioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/DAO/ExperienceDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <marker date="1502868936473" expanded="true" signature="302:361" ph="..." />
+            <marker date="1502868936473" expanded="true" signature="319:361" ph="select * fro... t_experience" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <marker date="1502868935990" expanded="true" signature="205:241" ph=" Home page controller. ..." />
+            <marker date="1502868935990" expanded="true" signature="3707:3869" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/ExperienceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/PersoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/views/admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="142" column="20" lean-forward="false" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="20" />
+          <folding>
+            <marker date="1502868938381" expanded="true" signature="108:23148" ph="{% block content ...%}" />
+            <marker date="1502868938381" expanded="true" signature="3787:4077" ph="{% if experiences ...%}" />
+            <marker date="1502868938381" expanded="true" signature="15549:16708" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="15549:16730" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="15549:16758" ph="{% for loisir in loisirs ...%}" />
+            <marker date="1502868938381" expanded="true" signature="15549:16780" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="15549:16797" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="15549:16915" ph="{% if persos ...%}" />
+            <marker date="1502868938381" expanded="true" signature="15549:17102" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="15649:16668" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="15698:16618" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="15750:16565" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="15803:16052" ph="..." />
+            <marker date="1502868938381" expanded="false" signature="15909:15916" ph="×" />
+            <marker date="1502868938381" expanded="true" signature="16103:16209" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="16262:16534" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="17161:20088" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="17240:20076" ph="{% if comments ...%}" />
+            <marker date="1502868938381" expanded="true" signature="17297:19964" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="17361:19947" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="17387:17658" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="17414:17631" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="17678:19925" ph="{% for comment in comments ...%}" />
+            <marker date="1502868938381" expanded="true" signature="17729:19893" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="18031:19869" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="18373:18457" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="18621:19825" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="18678:19769" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="18740:19708" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="18805:19094" ph="..." />
+            <marker date="1502868938381" expanded="false" signature="18925:18932" ph="×" />
+            <marker date="1502868938381" expanded="true" signature="19157:19288" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="19353:19667" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="20144:23123" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="20156:22947" ph="{% if users ...%}" />
+            <marker date="1502868938381" expanded="true" signature="20210:22838" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="20274:22821" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="20300:20523" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="20327:20496" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="20543:22799" ph="{% for user in users ...%}" />
+            <marker date="1502868938381" expanded="true" signature="20588:22767" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="20670:20905" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="20698:20878" ph="{% if user.role == 'ROLE_ADMIN' ...%}" />
+            <marker date="1502868938381" expanded="true" signature="20932:22743" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="21262:21346" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="21504:22699" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="21561:22643" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="21623:22582" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="21688:21977" ph="..." />
+            <marker date="1502868938381" expanded="false" signature="21808:21815" ph="×" />
+            <marker date="1502868938381" expanded="true" signature="22040:22168" ph="..." />
+            <marker date="1502868938381" expanded="true" signature="22233:22541" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_cv_abdoulaye/siteCV_silex/src/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

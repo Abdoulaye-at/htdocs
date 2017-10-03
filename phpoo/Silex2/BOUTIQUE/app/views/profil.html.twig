@@ -1,0 +1,11 @@
+
+{% extends 'layout.html.twig'%}
+{% block content %}
+
+	<h1>Bonjour {{ profil.pseudo }}</h1>
+	<p>Votre email : {{ profil.email }}</p>
+	<p>Votre adresse : {{ profil.adresse }}</p>
+	<p>Votre code postal : {{ profil.code_postal }}</p>
+	<p>Votre ville : {{ profil.ville }}</p>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+EXERCICE 5 : 
+
+On souhaite ajouter à nos fiches produit des suggestions : 
+	-> Lorsqu'on visite un produit il faut proposer tous les produits de la même categorie... sauf (evidement) le produit qu'on est en train de vister. 
+	
+Vous devez : 
+	1/ ajouter une méthode findSuggestions($id) dans ProduitDAO, qui va retourner tous les produits sous forme d'un array composé d'objet de la même categorie que celui dont on récupére l'ID, sauf le produit dont on récupere l'ID
+	
+	2/ Dans notre route produit/{id} récupérer les produits suggérés dans une variable $suggestions
+	
+	3/ Dans notre vue produit.html.twig afficher tous les produits suggérés
+	

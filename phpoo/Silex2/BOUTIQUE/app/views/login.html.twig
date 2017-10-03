@@ -1,0 +1,14 @@
+
+{% extends 'layout.html.twig'%}
+{% block content %}
+	<h3>Veuillez renseigner vos identifiants pour vous connecter</h3>
+	<form method="post" action="">
+		<label for="pseudo">Pseudo</label><br>
+		<input type="text" name="pseudo" id="pseudo"><br><br>
+
+		<label for="mdp">Mot de passe</label><br>
+		<input type="password" name="mdp" id="mdp"><br><br>
+
+		<input type="submit" value="se connecter" class="btn">
+	</form>
+{% endblock %}
